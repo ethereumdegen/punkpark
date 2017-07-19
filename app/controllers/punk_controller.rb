@@ -39,32 +39,18 @@ include Ethereum::Secp256k1
 
     vrs_data = [web3_signature_v,web3_signature_r,web3_signature_s]
 
-    p 'authing into punk'
-     p web3_signature
-
-      p challenge_hash
-        p vrs_data
-
-
-        #challenge_hash_bytes =  Utils.int_array_to_bytes
-
-
-        #https://github.com/cryptape/ruby-ethereum/blob/master/lib/ethereum/special_contract.rb
-        #Object {v: 27, r: "0587430e40c767d95f802a39212d0d0565a42b9c3ea7fb8e228f955704aaa12b", s: "60ebe58b8623f0a0824962c5c242a60e9be3e904e39c64be0e0b334b8ec26728"}
 
     public_key_raw =  Ethereum::Secp256k1.recover_pubkey(challenge_hash, vrs_data , compressed: false)
-    p ' raw '
-      p public_key_raw
 
-      public_key_hex =  Ethereum::Utils.encode_hex( public_key_raw )
+
+    public_key_hex =  Ethereum::Utils.encode_hex( public_key_raw )
 
     public_key = Ethereum::PublicKey.new(  public_key_hex)
 
     verified_public_address = Ethereum::Utils.encode_hex( public_key.to_address )
 
-   p 'authing in with pub addr '
-   p verified_public_address
-
+     p 'authing in with pub addr '
+     p verified_public_address
 
 
     crypto_punk_id_at_key = 1

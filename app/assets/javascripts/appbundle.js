@@ -94,7 +94,7 @@ function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
 
           var vrs_data_integer = {
             v: vrs_data.v.toString(16),
-            r: vrs_data.r.toString('hex'),  
+            r: vrs_data.r.toString('hex'),
             s: vrs_data.s.toString('hex')
 
           }
@@ -115,6 +115,8 @@ function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
        signature_s: vrs_data_integer.s,
 
      },
+   }).success(function(result) {
+      console.log(result)
     }).done(function() {
       console.log("authed in properly ")
     });

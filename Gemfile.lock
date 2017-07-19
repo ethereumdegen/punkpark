@@ -39,12 +39,17 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (6.0.4)
+    autoprefixer-rails (6.3.6)
+      execjs
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bitcoin-secp256k1 (0.4.0)
       ffi (>= 1.9.10)
     block_logger (0.1.3)
       logging (~> 2.0)
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     browserify-rails (4.2.0)
       addressable (>= 2.4.0)
       railties (>= 4.0.0, < 5.2)
@@ -181,6 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   browserify-rails
   byebug
   carrierwave

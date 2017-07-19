@@ -13,3 +13,8 @@ $ sudo make install  # optional
 
 Need to do this too
 https://stackoverflow.com/questions/40615330/ruby-ffi-not-finding-certain-functions
+
+
+
+THIS FEELS LIKE THE REINVENTION OF THE INTERNET
+--blog--
