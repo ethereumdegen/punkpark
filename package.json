@@ -1,0 +1,33 @@
+{
+  "name": "punkpark",
+  "version": "0.0.1",
+  "description": "A spot for digital cryptounk avatars to hang out",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "browserify": "^14.0.0",
+    "browserify-incremental": "^3.1.0",
+    "ethereumjs-util": "^5.1.2",
+    "jquery": "^3.2.1",
+    "require": "^2.4.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/admazzola/punkpark.git"
+  },
+  "keywords": [
+    "cryptopunk"
+  ],
+  "author": "admazzola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/admazzola/punkpark/issues"
+  },
+  "homepage": "https://github.com/admazzola/punkpark#readme"
+}
