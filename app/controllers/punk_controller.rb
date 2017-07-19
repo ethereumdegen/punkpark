@@ -56,18 +56,21 @@ include Ethereum::Secp256k1
     p ' raw '
       p public_key_raw
 
-    public_key = Ethereum::PublicKey.new(raw: public_key_raw)
+      public_key_hex =  Ethereum::Utils.encode_hex( public_key_raw )
 
-    public_address = public_key.to_address
+    public_key = Ethereum::PublicKey.new(  public_key_hex)
 
-  #  p 'authing in with pub addr '
-  #  p public_address
+    verified_public_address = Ethereum::Utils.encode_hex( public_key.to_address )
 
-  # ASSUME THAT THIS ALL WORKED
+   p 'authing in with pub addr '
+   p verified_public_address
+
+
 
     crypto_punk_id_at_key = 1
 
     #login
+    session[:current_public_address] = verified_public_address
     session[:current_user] = true
     session[:current_punk_id] = 1
 
@@ -77,7 +80,7 @@ include Ethereum::Secp256k1
     respond_to do |format|
 
       #format.html # show.html.erb
-      format.json { render json: "successfully authed login" }
+      format.json { render json: {success:true, verified_public_address: verified_public_address }  }
 
      end
 
