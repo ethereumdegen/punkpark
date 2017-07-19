@@ -81,9 +81,25 @@ function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
   var public_key_from_sig_hex = public_key_from_sig.toString('hex')
   console.log( public_key_from_sig_hex );
 
+
+
   var address_at_pub_key = ethUtil.publicToAddress(public_key_from_sig);
   var public_address_from_sig_hex = address_at_pub_key.toString('hex');
   console.log( public_address_from_sig_hex );
+
+    console.log( public_address_from_sig_hex );
+
+      console.log('VRS');
+      console.log( vrs_data  );
+
+          var vrs_data_integer = {
+            v: vrs_data.v.toString(16),
+            r: vrs_data.r.toString('hex'),  
+            s: vrs_data.s.toString('hex')
+
+          }
+
+          console.log( vrs_data_integer );
 
   var auth_url = "/punk/auth_into_punk";
 
@@ -91,7 +107,14 @@ function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
     url: auth_url,
     method: "POST",
     beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-    data: {signature: _signature_response_hex, challenge: _challenge_digest_hash.toString('hex')},
+    data: {
+      signature: _signature_response_hex,
+       challenge: _challenge_digest_hash.toString('hex'),
+       signature_v: vrs_data_integer.v,
+       signature_r: vrs_data_integer.r,
+       signature_s: vrs_data_integer.s,
+
+     },
     }).done(function() {
       console.log("authed in properly ")
     });
