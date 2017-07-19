@@ -28,6 +28,8 @@ gem 'browserify-rails'
 
 gem 'carrierwave'
 
+gem 'ruby-ethereum'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

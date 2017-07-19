@@ -82,11 +82,21 @@ function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
   console.log( public_key_from_sig_hex );
 
   var address_at_pub_key = ethUtil.publicToAddress(public_key_from_sig);
-    var public_address_from_sig_hex = address_at_pub_key.toString('hex');
+  var public_address_from_sig_hex = address_at_pub_key.toString('hex');
   console.log( public_address_from_sig_hex );
 
+  var auth_url = "/punk/auth_into_punk";
+
+    $.ajax({
+    url: auth_url,
+    method: "POST",
+    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+    data: {signature: _signature_response_hex, challenge: _challenge_digest_hash.toString('hex')},
+    }).done(function() {
+      console.log("authed in properly ")
+    });
 
 
-  
+
 
 }
