@@ -14,4 +14,4 @@
 //= require requirejs
 //= require appbundle
 //= require bootstrap-sprockets
-//= require flat-ui
+ 
