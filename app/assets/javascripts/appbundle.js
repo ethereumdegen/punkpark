@@ -39,11 +39,15 @@ window.addEventListener('load', function() {
             console.log(msg)
             var from = web3.eth.accounts[0]
 
+            var msg_hash = ethUtil.hashPersonalMessage( new Buffer(text, 'utf8') );
+
+
             web3.personal.sign(msg, from, function (err, result) {
              if (err) return console.error(err)
              console.log('PERSONAL SIGNED:' + result)
 
 
+              checkLoginSignature(result,msg_hash)
            });
 
            //send the expected public key, challenge, and signature to the server via Ajax to sign in
@@ -61,3 +65,29 @@ window.addEventListener('load', function() {
 }
 
 });
+
+
+function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
+{
+
+  if(typeof _challenge_digest_hash != 'buffer')
+  {
+    _challenge_digest_hash = Buffer.from(_challenge_digest_hash,'hex')
+  }
+
+
+  var vrs_data = ethUtil.fromRpcSig(_signature_response_hex)
+
+
+  //message is incorrect length
+  var public_key_from_sig = ethUtil.ecrecover(_challenge_digest_hash,vrs_data.v,vrs_data.r,vrs_data.s)
+  var public_key_from_sig_hex = public_key_from_sig.toString('hex')
+  console.log( public_key_from_sig_hex );
+
+  var address_at_pub_key = ethUtil.publicToAddress(public_key_from_sig);
+    var public_address_from_sig_hex = address_at_pub_key.toString('hex');
+  console.log( public_address_from_sig_hex );
+
+
+
+}
