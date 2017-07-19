@@ -2,7 +2,13 @@
 
 NEED TO INSTALL THIS
 
-https://github.com/bitcoin-core/secp256k1
+git clone https://github.com/bitcoin-core/secp256k1
+
+$ ./autogen.sh
+$ ./configure --enable-module-recovery
+$ make
+$ ./tests
+$ sudo make install  # optional
 
 
 Need to do this too
