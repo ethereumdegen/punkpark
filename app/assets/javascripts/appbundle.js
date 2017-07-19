@@ -1,9 +1,6 @@
 
-
-
-
-var $ = jQuery = require('jquery');
-var eth_utils = require('ethereumjs-util');
+window.$ = window.jQuery = global.$ = require('jquery');
+var eth_utils =  require('ethereumjs-util');
 
 
 
@@ -30,7 +27,7 @@ window.addEventListener('load', function() {
            console.log(personal)
 
 
-          $(".eth-sign-button").on('click', function(event) {
+          jQuery(".eth-sign-button").on('click', function(event) {
             event.preventDefault();
             console.log('trying to sign')
 
