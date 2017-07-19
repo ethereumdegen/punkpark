@@ -55,9 +55,6 @@ window.addEventListener('load', function() {
 
 
 
-
-
-
         });
 
 
@@ -89,5 +86,7 @@ function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
   console.log( public_address_from_sig_hex );
 
 
+
+  
 
 }

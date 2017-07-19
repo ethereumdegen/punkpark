@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  get 'punk/index'
+
+  get 'punk/show'
+
   get 'park/home'
+
+    get 'punk/test_signin'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
