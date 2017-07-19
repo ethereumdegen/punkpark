@@ -19,7 +19,20 @@ rescue_from ApplicationNotAuthenticated do
 end
 
 def authentication_required!
-  session[:current_user] || raise(ApplicationNotAuthenticated)
+  session_signed_in || raise(ApplicationNotAuthenticated)
+end
+
+
+def session_signed_in
+  session[:current_punk_id] != nil
+end
+
+def get_current_punk_id
+  session[:current_punk_id]
+end
+
+def session_has_public_address
+   session[:current_public_address] != nil
 end
 
 

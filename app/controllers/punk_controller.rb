@@ -71,8 +71,7 @@ include Ethereum::Secp256k1
 
     #login
     session[:current_public_address] = verified_public_address
-    session[:current_user] = true
-    session[:current_punk_id] = 1
+
 
     #alert[:flash] = "Logged in to your Punk!"
     #redirect_to :root_path
@@ -87,25 +86,18 @@ include Ethereum::Secp256k1
   end
 
 
+  #if the user has an address and no punk id then go here to pick one moetal kombat style
+  def select_punk
 
-  def signatureToVRS(signature)
 
-    p 'siggy is '
-    p signature
+  end
 
-    signature_array = []
-    sting_array = signature.each_char.map(&:to_s)
-    string_array.split(',').each do |char|
-      signature_array << char
-    end
 
-    # signature_ints = [0] * 64
+  def login_punk
+    #again make sure that the users session public address can access this punk
 
-    v = signature_array[1]
-    r = Ethereum::Utils.big_endian_to_int signature_array[0][0,32]
-    s = Ethereum::Utils.big_endian_to_int signature_array[0][32,32]
-
-    return [v,r,s]
+    #session[:current_user] = true
+    session[:current_punk_id] = 1
   end
 
 end
