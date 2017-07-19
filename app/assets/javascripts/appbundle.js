@@ -1,6 +1,6 @@
 
 window.$ = window.jQuery = global.$ = require('jquery');
-var eth_utils =  require('ethereumjs-util');
+var ethUtil =  require('ethereumjs-util');
 
 
 
