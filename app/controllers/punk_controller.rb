@@ -86,4 +86,13 @@ include Ethereum::Secp256k1
     session[:current_punk_id] = 1
   end
 
+
+  def logout_punk
+    session[:current_public_address] = nil
+
+    session[:current_punk_id] = nil
+
+    redirect_to root_path
+  end
+
 end

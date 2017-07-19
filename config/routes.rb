@@ -5,15 +5,20 @@ Rails.application.routes.draw do
 
   get 'park/home'
 
-    get 'punk/test_signin'
+
+    get 'punk/select' => 'punk#select_punk', :as => :select_punk
 
     post 'punk/auth_into_punk' => 'punk#auth_into_punk'
+
+    post 'punk/login' => 'punk#login_punk', :as => :login_punk
+
+    get 'logout' => 'punk#logout_punk', :as => :logout_punk
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'park#home'
+  root 'park#root'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
