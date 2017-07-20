@@ -89,12 +89,22 @@ include Ethereum::Secp256k1
 
 
     client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum/geth.ipc")
-    init = Ethereum::Initializer.new("app/assets/contracts/CryptoPunksMarket.sol", client)
-    init.build_all
-    crypto_punks_market_instance.as("0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB")
 
-    punk_one_address = simple_name_registry_instance.call_punk_index_to_address(1)
-    p 'address of punk 1 '
+
+
+
+  #  init = Ethereum::Initializer.new("app/assets/contracts/CryptoPunksMarket.sol", client)
+  #  init.build_all
+  #  crypto_punks_market_instance.as("0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB")
+
+  #  contract = Ethereum::Contract.create(file: "app/assets/contracts/CryptoPunksMarket.sol", address: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB ")
+
+  abi = File.read("app/assets/contracts/CryptoPunksMarket.abi")
+    contract = Ethereum::Contract.create(client: client, name: "CryptoPunksMarket", address: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB", abi: abi)
+
+    #contract.call.get("performer") # => "Black Eyed Peas"
+    punk_one_address =  contract.call.punk_index_to_address(100)
+     p 'address of punk 1 '
     p punk_one_address
 
     #need to use CALL to get the punks at this address
