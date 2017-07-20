@@ -102,10 +102,12 @@ include Ethereum::Secp256k1
     abi = File.read("app/assets/contracts/CryptoPunksMarket.abi")
     contract = Ethereum::Contract.create(client: client, name: "CryptoPunksMarket", address: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB", abi: abi)
 
-    p abi 
+    p abi
 
     #contract.call.get("performer") # => "Black Eyed Peas"
-    punk_one_address =  contract.call.punk_index_to_address(100)
+
+
+    punk_one_address =  contract.call.total_supply(   )
      p 'address of punk 1 '
     p punk_one_address
 
