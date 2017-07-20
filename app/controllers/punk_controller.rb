@@ -4,7 +4,7 @@ class PunkController < ApplicationController
 
 require 'rlp'
 require 'secp256k1'
-require 'ethereum'
+#require 'ethereum'
 require 'ethereum/constant'
 require 'ethereum/secp256k1'
 require 'ethereum/fast_rlp'
@@ -12,6 +12,8 @@ require 'ethereum/utils'
 require 'ethereum/public_key'
 require 'ethereum/base_convert'
 require 'ethereum/address'
+require 'ethereum/encoder'
+
 
 include Ethereum::FastRLP
 include Ethereum::Constant
@@ -102,12 +104,16 @@ include Ethereum::Secp256k1
     abi = File.read("app/assets/contracts/CryptoPunksMarket.abi")
     contract = Ethereum::Contract.create(client: client, name: "CryptoPunksMarket", address: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB", abi: abi)
 
-    p abi
 
     #contract.call.get("performer") # => "Black Eyed Peas"
 
+    encoded_value = custom_encode_uint(22).to_i
+    p encoded_value
 
     punk_one_address =  contract.call.total_supply(   )
+
+
+   punk_one_address =  contract.call.punk_index_to_address(  22 )
      p 'address of punk 1 '
     p punk_one_address
 
@@ -117,6 +123,17 @@ include Ethereum::Secp256k1
 
 
   end
+
+
+  def custom_encode_uint(val, _ = nil)
+
+     to_twos_complement(val).to_s(16).rjust(64, '0')
+
+  end
+
+  def to_twos_complement(number)
+      (number & ((1 << 256) - 1))
+    end
 
 
   def login_punk
