@@ -89,7 +89,7 @@ include Ethereum::Secp256k1
 
 
     client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum/geth.ipc")
-    init = Ethereum::Initializer.new("/app/assets/contracts/CryptoPunksMarket.sol", client)
+    init = Ethereum::Initializer.new("app/assets/contracts/CryptoPunksMarket.sol", client)
     init.build_all
     crypto_punks_market_instance.as("0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB")
 

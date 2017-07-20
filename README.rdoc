@@ -22,5 +22,13 @@ THIS FEELS LIKE THE REINVENTION OF THE INTERNET
 
 
 ##PREREQS
-NEED GETH 
+NEED GETH
+(add ppa repo)
+sudo apt-get install ethereum
+
 NEED SOLIDITY COMPILER
+1. sudo apt-get install solc
+2. which solc
+
+3. geth attach  //enter geth console
+4. admin.setSolc("/usr/bin/solc")
