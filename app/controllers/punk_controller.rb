@@ -1,12 +1,22 @@
 class PunkController < ApplicationController
-  before_action :authentication_required!, except: [:test_signin,:auth_into_punk]
+  before_action :authentication_required!, except: [:select_punk, :punk_signin,:auth_into_punk]
+  before_action :address_required!, only:[:select_punk]
 
+require 'rlp'
 require 'secp256k1'
 require 'ethereum'
+require 'ethereum/constant'
+require 'ethereum/secp256k1'
+require 'ethereum/fast_rlp'
 require 'ethereum/utils'
+require 'ethereum/public_key'
+require 'ethereum/base_convert'
+require 'ethereum/address'
 
+include Ethereum::FastRLP
+include Ethereum::Constant
+include Ethereum::Utils
 include Ethereum::Secp256k1
-
 
 #http://www.rubydoc.info/gems/ruby-ethereum/0.9.1/Ethereum/Utils#decode_hex-instance_method
 
@@ -74,6 +84,22 @@ include Ethereum::Secp256k1
 
   #if the user has an address and no punk id then go here to pick one moetal kombat style
   def select_punk
+
+    @current_public_address = session[:current_public_address]
+
+
+    client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum/geth.ipc")
+    init = Ethereum::Initializer.new("/app/assets/contracts/CryptoPunksMarket.sol", client)
+    init.build_all
+    crypto_punks_market_instance.as("0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB")
+
+    punk_one_address = simple_name_registry_instance.call_punk_index_to_address(1)
+    p 'address of punk 1 '
+    p punk_one_address
+
+    #need to use CALL to get the punks at this address
+    @owned_punk_id_array = []
+
 
 
   end

@@ -22,6 +22,11 @@ def authentication_required!
   session_signed_in || raise(ApplicationNotAuthenticated)
 end
 
+def address_required!
+  session_has_public_address || raise(ApplicationNotAuthenticated)
+end
+
+
 
 def session_signed_in
   session[:current_punk_id] != nil
@@ -34,6 +39,6 @@ end
 def session_has_public_address
    session[:current_public_address] != nil
 end
-
+ 
 
 end

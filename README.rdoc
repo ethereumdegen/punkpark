@@ -18,3 +18,9 @@ https://stackoverflow.com/questions/40615330/ruby-ffi-not-finding-certain-functi
 
 THIS FEELS LIKE THE REINVENTION OF THE INTERNET
 --blog--
+
+
+
+##PREREQS
+NEED GETH 
+NEED SOLIDITY COMPILER
