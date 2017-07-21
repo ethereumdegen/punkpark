@@ -33,6 +33,10 @@ gem 'carrierwave'
 
 gem 'ruby-ethereum'
 gem 'ethereum.rb'
+
+
+ #JSON RPC client
+gem 'jimson'
 #gem 'ethereum.rb'
 
 # Use ActiveModel has_secure_password
