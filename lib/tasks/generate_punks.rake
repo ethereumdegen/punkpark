@@ -11,3 +11,17 @@ task get_punk_owners_from_jsonrpc: :environment do
   p result
 
 end
+
+
+desc 'get_punk_owners_from_jsonrpc'
+task regenerate_punks: :environment do
+
+    Punk.destroy_all
+
+   (0..99).each do |punk_id|
+     punk = Punk.new(id: punk_id)
+     punk.save!
+     p 'saved punk ' + punk_id
+   end
+
+end
