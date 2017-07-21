@@ -29,4 +29,4 @@ production:
   <<: *default
   database: db/production.sqlite3
   username: punkpark_prod
-  password: <%= ENV['POSTGRES_PASSSWORD'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
