@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20170719034601) do
 
   create_table "punks", force: :cascade do |t|
     t.string   "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "owner_eth_address"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

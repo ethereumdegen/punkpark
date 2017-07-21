@@ -20,6 +20,9 @@ task regenerate_punks: :environment do
 
    (0..99).each do |punk_id|
      punk = Punk.new(id: punk_id)
+     image_path = "/assets/img/icons/-s7b28.jpg"
+
+     @user.avatar = File.open(image_path)
      punk.save!
      p 'saved punk ' + punk_id
    end
