@@ -33,8 +33,8 @@ class PunkAvatarUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
    version :thumb do
-    # process :resize_to_fit => [512, 512]
-     process :resize_to_fit => [24, 24]
+     
+    # process :resize_to_fit => [24, 24]
    end
 
   # Add a white list of extensions which are allowed to be uploaded.
