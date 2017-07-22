@@ -3,14 +3,15 @@ Rails.application.routes.draw do
 
   get 'punk/index'
 
- get 'punk/show'
 
  get 'park/home'
 
 
+  get 'punk/:punk_id' => 'punk#show', :as =>:show_punk
+
    get 'punk/select' => 'punk#select_punk', :as => :select_punk
 
-   post 'punk/auth_into_punk' => 'punk#auth_into_punk'
+   post 'punk/auth_into_eth_address' => 'punk#auth_into_eth_address'
 
    post 'punk/login' => 'punk#login_punk', :as => :login_punk
 

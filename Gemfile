@@ -21,6 +21,7 @@ gem 'bootstrap-sass'
 
 gem 'flat-ui-sass', github: 'wingrunr21/flat-ui-sass'
 
+gem 'mini_magick'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 

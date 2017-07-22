@@ -2249,7 +2249,7 @@ function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
 
           console.log( vrs_data_integer );
 
-  var auth_url = "/punk/auth_into_punk";
+  var auth_url = "/punk/auth_into_eth_address";
 
     $.ajax({
     url: auth_url,

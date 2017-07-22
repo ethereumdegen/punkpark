@@ -1,6 +1,6 @@
 class PunkController < ApplicationController
-  before_action :authentication_required!, except: [:select_punk, :punk_signin,:auth_into_punk]
-  before_action :address_required!, only:[:select_punk]
+  before_action :authentication_required!, except: [:select_punk, :show, :index, :punk_signin,:auth_into_eth_address]
+  before_action :address_required!
 
 require 'rlp'
 require 'secp256k1'
@@ -30,6 +30,8 @@ include Ethereum::Secp256k1
   end
 
   def show
+    punk_id = params[:punk_id]
+    @punk = Punk.find_by_id(punk_id)
   end
 
   def test_signin
@@ -39,7 +41,7 @@ include Ethereum::Secp256k1
   end
 
 
-  def auth_into_punk
+  def auth_into_eth_address
 
     web3_signature = params[:signature]
     web3_signature_v = params[:signature_v].to_i(16)
@@ -90,32 +92,22 @@ include Ethereum::Secp256k1
     @current_public_address = session[:current_public_address]
 
 
-    client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum/geth.ipc")
+    @punks_owned = Punk.where(owner_address: @current_public_address)
+
+  #  client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum/geth.ipc")
+
+  #  abi = File.read("app/assets/contracts/CryptoPunksMarket.abi")
+  #  contract = Ethereum::Contract.create(client: client, name: "CryptoPunksMarket", address: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB", abi: abi)
+
+  #  encoded_value = custom_encode_uint(22).to_i
+  #  p encoded_value
+
+  #  punk_one_address =  contract.call.total_supply(   )
 
 
-
-
-  #  init = Ethereum::Initializer.new("app/assets/contracts/CryptoPunksMarket.sol", client)
-  #  init.build_all
-  #  crypto_punks_market_instance.as("0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB")
-
-  #  contract = Ethereum::Contract.create(file: "app/assets/contracts/CryptoPunksMarket.sol", address: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB ")
-
-    abi = File.read("app/assets/contracts/CryptoPunksMarket.abi")
-    contract = Ethereum::Contract.create(client: client, name: "CryptoPunksMarket", address: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB", abi: abi)
-
-
-    #contract.call.get("performer") # => "Black Eyed Peas"
-
-    encoded_value = custom_encode_uint(22).to_i
-    p encoded_value
-
-    punk_one_address =  contract.call.total_supply(   )
-
-
-   punk_one_address =  contract.call.punk_index_to_address(  22 )
-     p 'address of punk 1 '
-    p punk_one_address
+   #punk_one_address =  contract.call.punk_index_to_address(  22 )
+    # p 'address of punk 1 '
+    p# punk_one_address
 
     #need to use CALL to get the punks at this address
     @owned_punk_id_array = []
