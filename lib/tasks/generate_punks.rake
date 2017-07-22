@@ -29,7 +29,7 @@ task regenerate_punks: :environment do
 
      punk_image_name = "punk" + punk_image_id
 
-     image_path = "app/assets/img/punks/"+punk_image_name+".png"
+     image_path = "app/images/punks/"+punk_image_name+".png"
 
      punk.avatar = File.open(image_path)
      punk.save!
