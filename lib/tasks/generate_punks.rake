@@ -18,7 +18,7 @@ task regenerate_punks: :environment do
 
     Punk.destroy_all
 
-   (0..99).each do |punk_id|
+   (0..9999).each do |punk_id|
      punk = Punk.new(id: punk_id)
 
      punk_image_id = punk_id.to_s
