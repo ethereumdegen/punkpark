@@ -5,21 +5,28 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: 5
+  adapter: postgresql
+  pool: 1
   timeout: 5000
+  host: 0.0.0.0
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: punkpark_dev
+  username: dev
+  password: password
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: punkpark_test
+  username: dev
+  password: password
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: punkpark_prod
+  username: punkpark
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
