@@ -7,8 +7,6 @@ Rails.application.routes.draw do
  get 'park/home'
 
 
-  get 'punk/:punk_id' => 'punk#show', :as =>:show_punk
-
    get 'punk/select' => 'punk#select_punk', :as => :select_punk
 
    post 'punk/auth_into_eth_address' => 'punk#auth_into_eth_address'
@@ -16,6 +14,10 @@ Rails.application.routes.draw do
    post 'punk/login' => 'punk#login_punk', :as => :login_punk
 
    get 'logout' => 'punk#logout_punk', :as => :logout_punk
+
+
+     get 'punk/:punk_id' => 'punk#show', :as =>:show_punk
+
 
  # The priority is based upon order of creation: first created -> highest priority.
  # See how all your routes lay out with "rake routes".
