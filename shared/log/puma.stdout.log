@@ -919,3 +919,763 @@ true
 Completed 200 OK in 2785ms (Views: 2784.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:25:52 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:31:46 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started HEAD "/logout" for 127.0.0.1 at 2017-07-23 16:32:20 -0400
+Processing by PunkController#logout_punk as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/application_controller.rb:30:in `initSessionState'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.4ms)
+Started GET "/logout" for 127.0.0.1 at 2017-07-23 16:32:23 -0400
+Processing by PunkController#logout_punk as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:32:23 -0400
+Processing by ParkController#root as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/application_controller.rb:30:in `initSessionState'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.2ms)
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:32:25 -0400
+Processing by ParkController#root as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/application_controller.rb:30:in `initSessionState'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.0ms)
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:32:28 -0400
+Processing by ParkController#root as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/application_controller.rb:30:in `initSessionState'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.4ms)
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:32:46 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/punk/auth_into_eth_address" for 127.0.0.1 at 2017-07-23 16:32:51 -0400
+Processing by PunkController#auth_into_eth_address as */*
+  Parameters: {"signature"=>"0xcc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d4731b", "challenge"=>"4b660e4a40444765b71714f90ad6fed0c15d02ea93d62e6dd56a9d803c51a574", "signature_v"=>"1b", "signature_r"=>"cc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d", "signature_s"=>"57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d473"}
+"authing in with pub addr "
+"7132c9f36abe62eab74cdfdd08c154c9ae45691b"
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:32:51 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:32:51 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (0.6ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.1ms)
+
+
+  
+TypeError (no implicit conversion of nil into Array):
+  
+app/controllers/punk_controller.rb:97:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (44.4ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:33:14 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 6.5ms)
+
+
+  
+TypeError (can't convert Punk to Array (Punk#to_ary gives NilClass)):
+  
+app/controllers/punk_controller.rb:97:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (286.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (350.1ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:33:25 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (0.7ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPunk Load (0.9ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.3ms)
+
+
+  
+NoMethodError (undefined method `<<' for #<ActiveRecord::Relation []>):
+  
+app/controllers/punk_controller.rb:97:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.8ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (26.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (56.6ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:33:58 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPunk Load (1.1ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 4.4ms)
+
+
+  
+NoMethodError (undefined method `<<' for #<ActiveRecord::Relation []>):
+  
+app/controllers/punk_controller.rb:97:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (53.5ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:34:53 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (0.7ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 5.4ms)
+
+
+  
+NoMethodError (undefined method `first' for #<Punk:0x007f499097d368>):
+  
+app/controllers/punk_controller.rb:97:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.5ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:34:59 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (4.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPunk Load (2.5ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 11.5ms)
+
+
+  
+TypeError (can't convert Punk to Array (Punk#to_ary gives NilClass)):
+  
+app/controllers/punk_controller.rb:97:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (62.5ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:35:07 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPunk Load (1.9ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 6.9ms)
+
+
+  
+NoMethodError (undefined method `<<' for #<ActiveRecord::Relation []>):
+  
+app/controllers/punk_controller.rb:97:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (25.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (52.1ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:35:12 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPunk Load (5.0ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 6.8ms)
+
+
+  
+NoMethodError (undefined method `push' for #<ActiveRecord::Relation []>):
+  
+app/controllers/punk_controller.rb:97:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (47.6ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:36:12 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.0ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (1.0ms)
+  Rendered punk/select_punk.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 39.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:37:10 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (3.3ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (2.3ms)
+  Rendered punk/select_punk.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 1091ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  width:33%": expected ";", was ":"):
+    2: <html>
+    3: <head>
+    4:   <title>Punkpark</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/assets/stylesheets/punk.scss:21
+app/assets/stylesheets/application.scss:22
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__3582825251599601863_69977150594940'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.1ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:37:18 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (3.2ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (1.1ms)
+  Rendered punk/select_punk.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2916ms (Views: 2908.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:37:59 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.7ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (1.2ms)
+  Rendered punk/select_punk.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 98ms (Views: 78.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:39:01 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.6ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (2.8ms)
+  Rendered punk/select_punk.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 77ms (Views: 70.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:39:24 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.6ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (0.9ms)
+  Rendered punk/select_punk.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2681ms (Views: 2676.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-07-23 16:39:28 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"2"}
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:42:49 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.4ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (1.6ms)
+  Rendered punk/select_punk.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 87ms (Views: 67.4ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-07-23 16:42:51 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"2"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+"Punk not owned by this user"
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:42:51 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:42:51 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.2ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (0.6ms)
+  Rendered punk/select_punk.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-07-23 16:42:56 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"2"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+"Punk not owned by this user"
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:42:56 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:42:56 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.2ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (0.8ms)
+  Rendered punk/select_punk.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-07-23 16:42:57 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"2"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+"Punk not owned by this user"
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:42:57 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:42:57 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.5ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (1.2ms)
+  Rendered punk/select_punk.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 62.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-07-23 16:42:59 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"2"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+"Punk not owned by this user"
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:42:59 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:42:59 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.3ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (0.8ms)
+  Rendered punk/select_punk.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 72ms (Views: 67.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:43:17 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (4.2ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.6ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (0.6ms)
+  Rendered punk/select_punk.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 3396ms (Views: 3386.6ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-07-23 16:43:22 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"2"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+"Punk not owned by this user"
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:43:22 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:43:22 -0400
+Processing by PunkController#select_punk as HTML
+  [1m[36mPunk Load (1.2ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering punk/select_punk.html.erb within layouts/application
+  Rendered punk/_punk_select_icon.html.erb (0.7ms)
+  Rendered punk/select_punk.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 48.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:43:49 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 48.4ms | ActiveRecord: 2.7ms)
+
+

@@ -55,4 +55,26 @@ $.ajax({
 })
 
 
+
+$(".punk-select-icon").on('click',function(){
+
+  var punk_id = $(this).data('punk-id');
+
+  console.log(punk_id)
+
+$.ajax({
+  method: "POST",
+  beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+  url: "<%= url_for login_punk_path %>",
+  data: { punk_id: punk_id }
+})
+  .success(function( result ) {
+   window.location.href = "<%= url_for root_path %>";
+  });
+
+
+
+})
+
+
 </script>

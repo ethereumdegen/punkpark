@@ -1,5 +1,5 @@
 class PunkController < ApplicationController
-  before_action :authentication_required!, except: [:select_punk, :show, :index, :punk_signin,:auth_into_eth_address,:login_guest]
+  before_action :authentication_required!, except: [:select_punk, :show, :index, :punk_signin,:auth_into_eth_address,:login_guest,:login_punk]
   before_action :address_required!, except: [:auth_into_eth_address,:index,:show]
 
 require 'rlp'
@@ -94,6 +94,10 @@ include Ethereum::Secp256k1
 
     @punks_owned = Punk.where(owner_eth_address: @current_public_address)
 
+  #  @punks_owned = @punks_owned.to_a << Punk.find_by_id(2)
+
+
+
   #  client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum/geth.ipc")
 
   #  abi = File.read("app/assets/contracts/CryptoPunksMarket.abi")
@@ -130,7 +134,36 @@ include Ethereum::Secp256k1
 
   def login_punk
     #again make sure that the users session public address can access this punk
+    submitted_punk_id = params[:punk_id]
 
+    matching_punk = Punk.find_by_id(submitted_punk_id)
+
+    if session[:current_punk_id] == nil
+
+      if matching_punk.owner_eth_address == session[:current_public_address]
+
+      session[:current_punk_id] = submitted_punk_id
+
+      else
+        p 'Punk not owned by this user'
+
+        respond_to do |format|
+          #format.html # show.html.erb
+          format.json { render json: {success:false, punk_id: submitted_punk_id }  }
+         end
+
+         return
+
+
+      end
+    end
+
+    respond_to do |format|
+
+      #format.html # show.html.erb
+      format.json { render json: {success:true, punk_id: session[:current_punk_id] }  }
+
+     end
 
   #  session[:current_punk_id] = 1
   end

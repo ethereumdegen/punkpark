@@ -10,8 +10,24 @@
     background-color: #9b59b6;
 }
 
+.punk-select-icon
+{
+  cursor:pointer;
+}
+
 .select-punk-list
 {
   width:100%;
   min-height:400px;
+}
+
+.punk-select-icon
+{
+  width:33%;
+
+  img
+  {
+        width:100%;
+        image-rendering: pixelated;
+  }
 }
