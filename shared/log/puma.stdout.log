@@ -809,3 +809,25 @@ true
 Completed 200 OK in 96ms (Views: 94.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-23 15:50:24 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 15:51:37 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 3285ms (Views: 3284.5ms | ActiveRecord: 0.0ms)
+
+
