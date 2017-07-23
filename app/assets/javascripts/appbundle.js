@@ -118,7 +118,8 @@ function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
    }).success(function(result) {
       console.log(result)
     }).done(function() {
-      console.log("authed in properly ")
+      console.log("authed in properly ");
+      window.location.href = "/";
     });
 
 

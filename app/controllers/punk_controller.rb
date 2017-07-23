@@ -1,5 +1,5 @@
 class PunkController < ApplicationController
-  before_action :authentication_required!, except: [:select_punk, :show, :index, :punk_signin,:auth_into_eth_address]
+  before_action :authentication_required!, except: [:select_punk, :show, :index, :punk_signin,:auth_into_eth_address,:login_guest]
   before_action :address_required!, except: [:auth_into_eth_address,:index,:show]
 
 require 'rlp'
@@ -131,14 +131,33 @@ include Ethereum::Secp256k1
   def login_punk
     #again make sure that the users session public address can access this punk
 
-    #session[:current_user] = true
-    session[:current_punk_id] = 1
+
+  #  session[:current_punk_id] = 1
+  end
+
+
+  def login_guest
+    #again make sure that the users session public address can access this punk
+
+
+    if session[:guest_id] == nil
+      new_guest_id = SecureRandom.hex(16)
+      session[:guest_id] = new_guest_id
+    end
+
+    respond_to do |format|
+
+      #format.html # show.html.erb
+      format.json { render json: {success:true, guest_id: session[:guest_id] }  }
+
+     end
+
   end
 
 
   def logout_punk
     session[:current_public_address] = nil
-
+    session[:guest_id] = nil
     session[:current_punk_id] = nil
 
     redirect_to root_path

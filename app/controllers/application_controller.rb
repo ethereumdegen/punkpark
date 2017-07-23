@@ -18,6 +18,19 @@ rescue_from ApplicationNotAuthenticated do
   end
 end
 
+before_action :initSessionState
+
+def initSessionState
+  @acct_name_short = "----"
+
+  if session[:current_punk_id]
+    @acct_name_short = "Punk"+session[:current_punk_id].to_s
+    @current_punk = Punk.find_by_id(session[:current_punk_id])
+  else session[:current_public_address]
+    @acct_name_short = "0x"+session[:current_public_address][0..3]
+  end
+end
+
 def authentication_required!
   session_signed_in || raise(ApplicationNotAuthenticated)
 end
@@ -28,8 +41,12 @@ end
 
 
 
-def session_signed_in
+def session_punk_signed_in
   session[:current_punk_id] != nil
+end
+
+def session_signed_in
+  session[:current_punk_id] != nil || session[:guest_id] != nil
 end
 
 def get_current_punk_id
@@ -39,6 +56,6 @@ end
 def session_has_public_address
    session[:current_public_address] != nil
 end
- 
+
 
 end

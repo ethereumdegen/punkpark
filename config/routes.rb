@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
    get 'punk/select' => 'punk#select_punk', :as => :select_punk
 
+
+      post 'punk/login_guest' => 'punk#login_guest', :as => :login_guest
+
+
    post 'punk/auth_into_eth_address' => 'punk#auth_into_eth_address'
 
    post 'punk/login' => 'punk#login_punk', :as => :login_punk
