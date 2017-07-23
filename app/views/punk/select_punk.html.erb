@@ -1,1 +1,36 @@
-Select your Punk
+
+<div class="container">
+  <div class='select-punk-menu'>
+    <h4> Select your Punk </h4>
+
+      <div class="select-punk-list">
+
+        <% if @punks_owned.size < 1%>
+          No cryptopunks were found in your ethereum account <%= @current_public_address %>.
+        <% else %>
+
+          <% @punks_owned.each do |punk| %>
+            <%= render partial: 'punk_select_icon', locals:{punk: punk}%> 
+          <% end %>
+
+        <% end %>
+
+      </div>
+
+      <div class="select-button-container pull-right">
+
+
+        <a href="https://metamask.io" target="_blank">
+        <div class="btn btn-default get-metamask">
+           Get a Punk
+        </div>
+        </a>
+
+        <div class="btn btn-primary eth-sign-button">
+            Continue as a Guest
+        </div>
+
+      </div>
+
+  </div>
+</div>

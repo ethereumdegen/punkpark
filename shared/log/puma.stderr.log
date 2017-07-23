@@ -1,0 +1,18 @@
+=== puma startup: 2017-07-23 14:53:04 -0400 ===
+/home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/launcher.rb:130:in `initialize': No such file or directory @ rb_sysopen - /home/andy/dev/punkpark/shared/pids/puma.pid (Errno::ENOENT)
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/launcher.rb:130:in `open'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/launcher.rb:130:in `write_pid'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/launcher.rb:105:in `write_state'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/cluster.rb:418:in `run'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/launcher.rb:172:in `run'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/rack/handler/puma.rb:51:in `run'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/rack-2.0.3/lib/rack/server.rb:297:in `start'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/railties-5.0.0/lib/rails/commands/server.rb:79:in `start'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/railties-5.0.0/lib/rails/commands/commands_tasks.rb:90:in `block in server'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/railties-5.0.0/lib/rails/commands/commands_tasks.rb:85:in `tap'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/railties-5.0.0/lib/rails/commands/commands_tasks.rb:85:in `server'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/railties-5.0.0/lib/rails/commands/commands_tasks.rb:49:in `run_command!'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/railties-5.0.0/lib/rails/commands.rb:18:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+=== puma startup: 2017-07-23 14:53:20 -0400 ===

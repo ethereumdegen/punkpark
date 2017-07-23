@@ -1,0 +1,21 @@
+=== puma startup: 2017-07-23 14:53:04 -0400 ===
+[31566] * Starting control server on unix:///tmp/puma-status-1500835984442-31566
+Exiting
+=== puma startup: 2017-07-23 14:53:20 -0400 ===
+[31614] * Starting control server on unix:///tmp/puma-status-1500836000379-31614
+[31614] - Worker 0 (pid: 31622) booted, phase: 0
+[31614] - Worker 1 (pid: 31626) booted, phase: 0
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 14:53:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 962ms (Views: 932.6ms | ActiveRecord: 2.4ms)
+
+
+[31614] - Gracefully shutting down workers...
+[31614] === puma shutdown: 2017-07-23 14:53:31 -0400 ===
+[31614] - Goodbye!
+Exiting

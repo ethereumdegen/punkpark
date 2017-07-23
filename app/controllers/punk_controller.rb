@@ -92,7 +92,7 @@ include Ethereum::Secp256k1
     @current_public_address = session[:current_public_address]
 
 
-    @punks_owned = Punk.where(owner_address: @current_public_address)
+    @punks_owned = Punk.where(owner_eth_address: @current_public_address)
 
   #  client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum/geth.ipc")
 
