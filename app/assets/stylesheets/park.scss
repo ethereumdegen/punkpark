@@ -13,3 +13,23 @@
 {
   cursor:pointer;
 }
+
+
+.navbar-search
+{
+  display: inline-block;
+  padding-top: 10px;
+  
+  input
+  {
+    display: inline-block !important;
+  }
+  .btn
+  {
+    display: inline-block;}
+}
+
+.form-inline
+{
+      display: inline;
+}

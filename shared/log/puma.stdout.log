@@ -831,3 +831,91 @@ true
 Completed 200 OK in 3285ms (Views: 3284.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:02:12 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:18:59 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:19:27 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 2416ms (Views: 2415.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:19:50 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 3613ms (Views: 3612.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:20:02 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2929ms (Views: 2928.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:20:34 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 2840ms (Views: 2838.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:21:06 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 2783ms (Views: 2782.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:21:48 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2785ms (Views: 2784.0ms | ActiveRecord: 0.0ms)
+
+
