@@ -1,6 +1,6 @@
 class PunkController < ApplicationController
   before_action :authentication_required!, except: [:select_punk, :show, :index, :punk_signin,:auth_into_eth_address]
-  before_action :address_required!, except: [:auth_into_eth_address]
+  before_action :address_required!, except: [:auth_into_eth_address,:index,:show]
 
 require 'rlp'
 require 'secp256k1'

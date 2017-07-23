@@ -1,5 +1,21 @@
 == README
 
+
+-finish the pipeline
+-add a Profile model with mutable data like:
+1. the color of the image background (pastels)
+2. name of the punk
+3. bio of the punk
+4. allow for making status updates like FB
+5. favorite music, food, etc
+6. email address, witter handle, reddit account, github account, etc
+7. A secret store for passwords to those accounts with instructions
+
+-Write an 'about' section and blog about how these are digital Personas, not just icons 
+
+
+
+
 NEED TO INSTALL THIS
 
 git clone https://github.com/bitcoin-core/secp256k1
