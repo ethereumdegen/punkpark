@@ -21,3 +21,6 @@
 
 /public/assets
 /public/uploads
+
+/shared/*
+/shared
