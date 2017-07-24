@@ -1679,3 +1679,41 @@ Processing by PunkController#select_punk as HTML
 Completed 200 OK in 57ms (Views: 48.4ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 16:51:08 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 47.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/punk/login_guest" for 127.0.0.1 at 2017-07-23 16:51:16 -0400
+Processing by PunkController#login_guest as */*
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:51:16 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 16:51:29 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+[31764] ! Terminating timed out worker: 31776
+[31764] - Worker 0 (pid: 29390) booted, phase: 0
