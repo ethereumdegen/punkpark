@@ -21,6 +21,9 @@ Rails.application.routes.draw do
 
    get 'punk/:punk_id' => 'punk#show', :as =>:punk
 
+
+      get 'punk/:punk_id/edit' => 'punk#edit', :as =>:edit_punk
+
  # The priority is based upon order of creation: first created -> highest priority.
  # See how all your routes lay out with "rake routes".
 

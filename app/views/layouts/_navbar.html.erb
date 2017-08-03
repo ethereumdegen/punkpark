@@ -65,7 +65,8 @@
 
 
             <% if @current_punk %>
-              <li><a href="<%= url_for @current_punk %>">  View Punk <%= @current_punk.id %>  </a></li>
+              <li><a href="<%= url_for @current_punk %>">  My Profile  </a></li>
+              <li><a href="<%= url_for edit_punk_path @current_punk %>">  Edit Profile    </a></li>
               <li><a href="http://etherscan.io/address/<%=@current_public_address%>" target="_blank">View Account</a></li>
 
 

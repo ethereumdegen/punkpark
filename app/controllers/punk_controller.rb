@@ -34,6 +34,11 @@ include Ethereum::Secp256k1
     @punk = Punk.find_by_id(punk_id)
   end
 
+  def edit
+    punk_id = params[:punk_id]
+    @punk = Punk.find_by_id(punk_id)
+  end
+
   def test_signin
 
         session[:current_user] = true
