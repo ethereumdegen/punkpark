@@ -16,10 +16,24 @@ end
 desc 'get_punk_owners_from_jsonrpc'
 task regenerate_punks: :environment do
 
+
+    p 'destroying punks '
+
     Punk.destroy_all
 
+    client = Jimson::Client.new("localhost:4040") # the URL for the JSON-RPC 2.0 server to connect to
+
+
+      p 'connected to client '
+
    (0..9999).each do |punk_id|
-     punk = Punk.new(id: punk_id)
+
+     result = client.getPunkOwner(punk_id) # call the 'sum' method on the RPC server and save the result '3'
+
+
+     punk = Punk.new(id: punk_id, owner_eth_address: result)
+
+     p result
 
      punk_image_id = punk_id.to_s
 

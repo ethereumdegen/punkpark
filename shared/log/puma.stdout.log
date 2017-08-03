@@ -1717,3 +1717,345 @@ Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.0ms)
 
 [31764] ! Terminating timed out worker: 31776
 [31764] - Worker 0 (pid: 29390) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2017-07-23 21:08:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 1333ms (Views: 1325.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 21:08:07 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-07-23 21:08:09 -0400
+Processing by PunkController#logout_punk as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 21:08:09 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/punk/auth_into_eth_address" for 127.0.0.1 at 2017-07-23 21:08:35 -0400
+Processing by PunkController#auth_into_eth_address as */*
+  Parameters: {"signature"=>"0xcc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d4731b", "challenge"=>"4b660e4a40444765b71714f90ad6fed0c15d02ea93d62e6dd56a9d803c51a574", "signature_v"=>"1b", "signature_r"=>"cc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d", "signature_s"=>"57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d473"}
+"authing in with pub addr "
+"7132c9f36abe62eab74cdfdd08c154c9ae45691b"
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 21:08:35 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-07-23 21:08:35 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 61.6ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/punk/login_guest" for 127.0.0.1 at 2017-07-23 21:09:26 -0400
+Processing by PunkController#login_guest as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 21:09:26 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/1" for 127.0.0.1 at 2017-07-23 21:09:35 -0400
+Processing by PunkController#show as HTML
+  Parameters: {"punk_id"=>"1"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering punk/show.html.erb within layouts/application
+  Rendered punk/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 50.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-23 21:10:07 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+true
+true
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 75.5ms | ActiveRecord: 0.0ms)
+
+
+[31764] ! Terminating timed out worker: 31780
+[31764] - Worker 1 (pid: 31078) booted, phase: 0
+[31764] ! Terminating timed out worker: 31078
+[31764] ! Out-of-sync worker list, no 31078 worker
+[31764] - Worker 1 (pid: 21453) booted, phase: 0
+[31764] - Gracefully shutting down workers...
+[31764] === puma shutdown: 2017-07-25 18:11:06 -0400 ===
+[31764] - Goodbye!
+Exiting
+=== puma startup: 2017-08-02 23:15:33 -0400 ===
+[13733] * Starting control server on unix:///tmp/puma-status-1501730133982-13733
+[13733] - Worker 1 (pid: 13754) booted, phase: 0
+[13733] - Worker 0 (pid: 13750) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2017-08-02 23:15:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 775ms (Views: 764.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 23:16:17 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/punk/auth_into_eth_address" for 127.0.0.1 at 2017-08-02 23:16:22 -0400
+Processing by PunkController#auth_into_eth_address as */*
+  Parameters: {"signature"=>"0xcc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d4731b", "challenge"=>"4b660e4a40444765b71714f90ad6fed0c15d02ea93d62e6dd56a9d803c51a574", "signature_v"=>"1b", "signature_r"=>"cc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d", "signature_s"=>"57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d473"}
+"authing in with pub addr "
+"7132c9f36abe62eab74cdfdd08c154c9ae45691b"
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 23:16:23 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:16:23 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 141ms (Views: 115.5ms | ActiveRecord: 7.5ms)
+
+
+[13733] - Gracefully shutting down workers...
+[13733] === puma shutdown: 2017-08-02 23:17:23 -0400 ===
+[13733] - Goodbye!
+Exiting
+=== puma startup: 2017-08-02 23:30:03 -0400 ===
+[18909] * Starting control server on unix:///tmp/puma-status-1501731003184-18909
+[18909] - Worker 0 (pid: 18924) booted, phase: 0
+[18909] - Worker 1 (pid: 18928) booted, phase: 0
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:30:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 838ms (Views: 812.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-02 23:31:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PunkController#logout_punk as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 23:31:37 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:31:37 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 660ms (Views: 646.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-02 23:31:41 -0400
+Processing by PunkController#logout_punk as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 23:31:41 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:31:41 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 23:31:44 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:31:44 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 96ms (Views: 93.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-02 23:31:48 -0400
+Processing by PunkController#logout_punk as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 23:31:49 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:31:49 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 132ms (Views: 128.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-02 23:31:52 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:31:52 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/select_punk.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:32:36 -0400
+Processing by PunkController#select_punk as HTML
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `verified_public_address' for #<PunkController:0x007f65311ee8d8>):
+  
+app/controllers/punk_controller.rb:100:in `select_punk'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.0ms)
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-02 23:32:45 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.9ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (1.3ms)
+  Rendered punk/_punk_select_icon.html.erb (0.5ms)
+  Rendered punk/select_punk.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 70.4ms | ActiveRecord: 5.9ms)
+
+
+[18909] - Gracefully shutting down workers...
+[18909] === puma shutdown: 2017-08-02 23:32:52 -0400 ===
+[18909] - Goodbye!
+Exiting

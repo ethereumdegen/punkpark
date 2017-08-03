@@ -69,6 +69,10 @@ include Ethereum::Secp256k1
 
     crypto_punk_id_at_key = 1
 
+    if !verified_public_address.start_with?("0x")
+      verified_public_address = "0x" + verified_public_address
+    end
+
     #login
     session[:current_public_address] = verified_public_address
 
@@ -91,6 +95,10 @@ include Ethereum::Secp256k1
 
     @current_public_address = session[:current_public_address]
 
+
+    if !@current_public_address.start_with?("0x")
+      @current_public_address = "0x" + @current_public_address
+    end
 
     @punks_owned = Punk.where(owner_eth_address: @current_public_address)
 
