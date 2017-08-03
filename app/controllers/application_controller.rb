@@ -23,9 +23,18 @@ before_action :initSessionState
 def initSessionState
   @acct_name_short = "----"
 
+  @session_has_public_address = session_has_public_address
+    @session_signed_in = session_signed_in
+  @session_punk_signed_in = session_punk_signed_in
+
+  if session_has_public_address
+    @current_public_address = session[:current_public_address]
+  end
+
   if session[:current_punk_id]
     @acct_name_short = "Punk"+session[:current_punk_id].to_s
     @current_punk = Punk.find_by_id(session[:current_punk_id])
+    
   elsif session[:current_public_address]
     @acct_name_short = "0x"+session[:current_public_address][0..3]
   end

@@ -19,9 +19,7 @@ Rails.application.routes.draw do
 
    get 'logout' => 'punk#logout_punk', :as => :logout_punk
 
-
-     get 'punk/:punk_id' => 'punk#show', :as =>:show_punk
-
+   get 'punk/:punk_id' => 'punk#show', :as =>:punk
 
  # The priority is based upon order of creation: first created -> highest priority.
  # See how all your routes lay out with "rake routes".
