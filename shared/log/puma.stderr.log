@@ -67,3 +67,7 @@
 2017-08-03 21:00:36 -0400: HTTP parse error, malformed request (): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
 2017-08-03 21:00:36 -0400: ENV: {"rack.version"=>[1, 3], "rack.errors"=>#<IO:/home/andy/dev/punkpark/shared/log/puma.stderr.log>, "rack.multithread"=>true, "rack.multiprocess"=>false, "rack.run_once"=>false, "SCRIPT_NAME"=>"", "QUERY_STRING"=>"", "SERVER_PROTOCOL"=>"HTTP/1.1", "SERVER_SOFTWARE"=>"puma 3.4.0 Owl Bowl Brawl", "GATEWAY_INTERFACE"=>"CGI/1.2"}
 ---
+/home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/server.rb:364:in `close': can't modify frozen IOError (RuntimeError)
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/server.rb:364:in `ensure in handle_servers'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/server.rb:368:in `handle_servers'
+	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/server.rb:297:in `block in run'

@@ -1,5 +1,5 @@
 class PunkController < ApplicationController
-  before_action :authentication_required!, except: [:select_punk, :show, :index, :punk_signin,:auth_into_eth_address,:login_guest,:login_punk]
+  before_action :authentication_required!, except: [:select_punk, :show, :index, :punk_signin,:auth_into_eth_address,:login_guest,:login_punk,:logout_punk]
   before_action :address_required!, except: [:auth_into_eth_address,:index,:show]
 
 require 'rlp'
@@ -202,6 +202,8 @@ include Ethereum::Secp256k1
 
 
   def logout_punk
+
+    p 'logout'
     session[:current_public_address] = nil
     session[:guest_id] = nil
     session[:current_punk_id] = nil
