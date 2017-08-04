@@ -2905,3 +2905,97 @@ Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.3ms)
 [7697] === puma shutdown: 2017-08-03 18:44:22 -0400 ===
 [7697] - Goodbye!
 Exiting
+=== puma startup: 2017-08-03 20:58:48 -0400 ===
+[14918] * Starting control server on unix:///tmp/puma-status-1501808328471-14918
+[14918] - Worker 0 (pid: 14931) booted, phase: 0
+[14918] - Worker 1 (pid: 14935) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2017-08-03 21:00:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 419ms (Views: 412.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 21:02:27 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 21:03:11 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 21:04:53 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170803-14931-1v0nqwn" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170803-14931-omot9n" -
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2631ms (Views: 2630.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 21:05:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.2ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170803-14935-z5q77w" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170803-14935-1ce1ce6" -
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 1793ms (Views: 1785.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/punk/auth_into_eth_address" for 127.0.0.1 at 2017-08-03 21:06:00 -0400
+Processing by PunkController#auth_into_eth_address as */*
+  Parameters: {"signature"=>"0xcc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d4731b", "challenge"=>"4b660e4a40444765b71714f90ad6fed0c15d02ea93d62e6dd56a9d803c51a574", "signature_v"=>"1b", "signature_r"=>"cc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d", "signature_s"=>"57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d473"}
+"authing in with pub addr "
+"7132c9f36abe62eab74cdfdd08c154c9ae45691b"
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 21:06:00 -0400
+Processing by ParkController#root as HTML
+" hellooooo"
+false
+false
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-03 21:06:00 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.8ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.9ms)
+  Rendered punk/_punk_select_icon.html.erb (0.5ms)
+  Rendered punk/select_punk.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 61.2ms | ActiveRecord: 5.3ms)
+
+

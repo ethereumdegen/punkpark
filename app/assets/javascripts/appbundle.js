@@ -42,6 +42,11 @@ window.addEventListener('load', function() {
             var msg_hash = ethUtil.hashPersonalMessage( new Buffer(text, 'utf8') );
 
 
+          if(typeof from == "undefined")
+          {
+            alert("Please log in to Metamask")
+          }else
+          {
             web3.personal.sign(msg, from, function (err, result) {
              if (err) return console.error(err)
              console.log('PERSONAL SIGNED:' + result)
@@ -49,6 +54,11 @@ window.addEventListener('load', function() {
 
               checkLoginSignature(result,msg_hash)
            });
+          }
+
+
+
+
 
            //send the expected public key, challenge, and signature to the server via Ajax to sign in
 
