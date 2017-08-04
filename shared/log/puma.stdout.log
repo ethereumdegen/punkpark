@@ -4011,3 +4011,7 @@ DEPRECATION WARNING: `render :text` is deprecated because it does not actually r
 Completed 200 OK in 94ms (Views: 87.1ms | ActiveRecord: 0.0ms)
 
 
+[30742] - Gracefully shutting down workers...
+[30742] === puma shutdown: 2017-08-04 07:31:25 -0700 ===
+[30742] - Goodbye!
+Exiting
