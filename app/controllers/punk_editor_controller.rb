@@ -1,0 +1,2 @@
+class PunkEditorController < ApplicationController
+end

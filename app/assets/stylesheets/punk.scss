@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$punk_purple: #9b59b6;
+$punk_gray: #eee;
+$punk_aqua: #1abc9c;
+
 .punk-profile-image
 {
     width:100%;
@@ -31,4 +35,25 @@
         width:100%;
         image-rendering: pixelated;
   }
+}
+
+
+.punk-menu-nav
+{
+  li
+  {
+    padding: 10px;
+        padding: 5px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+  }
+
+  li:hover
+  {
+    background-color: $punk_gray;
+    cursor:pointer;
+    color:$punk_aqua;
+  }
+
 }

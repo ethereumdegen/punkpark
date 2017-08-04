@@ -71,3 +71,4 @@
 	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/server.rb:364:in `ensure in handle_servers'
 	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/server.rb:368:in `handle_servers'
 	from /home/andy/.rvm/gems/ruby-2.2.7/gems/puma-3.4.0/lib/puma/server.rb:297:in `block in run'
+=== puma startup: 2017-08-03 22:41:07 -0400 ===

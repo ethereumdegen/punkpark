@@ -16,8 +16,10 @@ Rails.application.routes.draw do
    post 'punk/auth_into_eth_address' => 'punk#auth_into_eth_address'
 
    post 'punk/login' => 'punk#login_punk', :as => :login_punk
+   
+   get 'punk/logout' => 'punk#logout_punk', :as => :logout_punk
 
-   get 'logout' => 'punk#logout_punk', :as => :logout_punk
+   get 'logout' => 'punk#logout_address', :as => :logout_address
 
    get 'punk/:punk_id' => 'punk#show', :as =>:punk
 

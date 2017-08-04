@@ -3401,3 +3401,431 @@ Completed 200 OK in 60ms (Views: 44.1ms | ActiveRecord: 3.6ms)
 [14918] === puma shutdown: 2017-08-03 21:25:11 -0400 ===
 [14918] - Goodbye!
 Exiting
+=== puma startup: 2017-08-03 22:41:07 -0400 ===
+[5752] * Starting control server on unix:///tmp/puma-status-1501814467743-5752
+[5752] - Worker 0 (pid: 5766) booted, phase: 0
+[5752] - Worker 1 (pid: 5770) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:41:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 583ms (Views: 575.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/punk/auth_into_eth_address" for 127.0.0.1 at 2017-08-03 22:41:28 -0400
+Processing by PunkController#auth_into_eth_address as */*
+  Parameters: {"signature"=>"0xcc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d4731b", "challenge"=>"4b660e4a40444765b71714f90ad6fed0c15d02ea93d62e6dd56a9d803c51a574", "signature_v"=>"1b", "signature_r"=>"cc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d", "signature_s"=>"57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d473"}
+"authing in with pub addr "
+"7132c9f36abe62eab74cdfdd08c154c9ae45691b"
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:41:28 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-03 22:41:28 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (1.1ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (1.2ms)
+  Rendered punk/_punk_select_icon.html.erb (0.3ms)
+  Rendered punk/select_punk.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 238ms (Views: 223.8ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-08-03 22:41:29 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"1385"}
+  [1m[36mPunk Load (0.8ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1385], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:41:29 -0400
+Processing by ParkController#root as HTML
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1385], ["LIMIT", 1]]
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:21 -0400
+Processing by ParkController#root as HTML
+  [1m[36mPunk Load (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1385], ["LIMIT", 1]]
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (59.3ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `punk_logout_path' for #<#<Class:0x007f1cd4903740>:0x007f1cd4902598>):
+    69:               <li><a href="<%= url_for edit_punk_path @current_punk %>">  Edit Profile    </a></li>
+    70:               <li><a href="http://etherscan.io/address/<%=@current_public_address%>" target="_blank">View Account</a></li>
+    71: 
+    72:                <li><a href="<%= url_for punk_logout_path %>">Switch Punk</a></li>
+    73:             <% else %>
+    74: 
+    75:                  <li><a href="http://etherscan.io/address/<%=@current_public_address%>" target="_blank">View Account</a></li>
+  
+app/views/layouts/_navbar.html.erb:72:in `_app_views_layouts__navbar_html_erb__2341158399500719634_69881178566680'
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___4308824616500907150_69880898778060'
+app/controllers/park_controller.rb:10:in `root'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.8ms)
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:30 -0400
+Processing by ParkController#root as HTML
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1385], ["LIMIT", 1]]
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/punk/logout" for 127.0.0.1 at 2017-08-03 22:44:33 -0400
+Processing by PunkController#logout_punk as HTML
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1385], ["LIMIT", 1]]
+"logout"
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:33 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-03 22:44:33 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.9ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.9ms)
+  Rendered punk/_punk_select_icon.html.erb (0.3ms)
+  Rendered punk/select_punk.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-08-03 22:44:35 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (6.7ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:35 -0400
+Processing by ParkController#root as HTML
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/punk/logout" for 127.0.0.1 at 2017-08-03 22:44:38 -0400
+Processing by PunkController#logout_punk as HTML
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+"logout"
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:38 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-03 22:44:38 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.9ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.6ms)
+  Rendered punk/_punk_select_icon.html.erb (0.2ms)
+  Rendered punk/select_punk.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-08-03 22:44:39 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:39 -0400
+Processing by ParkController#root as HTML
+  [1m[36mPunk Load (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-03 22:44:40 -0400
+Processing by PunkController#logout_address as HTML
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+"logout"
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:40 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:53 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/punk/auth_into_eth_address" for 127.0.0.1 at 2017-08-03 22:44:57 -0400
+Processing by PunkController#auth_into_eth_address as */*
+  Parameters: {"signature"=>"0xcc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d4731b", "challenge"=>"4b660e4a40444765b71714f90ad6fed0c15d02ea93d62e6dd56a9d803c51a574", "signature_v"=>"1b", "signature_r"=>"cc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d", "signature_s"=>"57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d473"}
+"authing in with pub addr "
+"7132c9f36abe62eab74cdfdd08c154c9ae45691b"
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:44:57 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-03 22:44:57 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (1.0ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (2.4ms)
+  Rendered punk/_punk_select_icon.html.erb (0.4ms)
+  Rendered punk/select_punk.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 80ms (Views: 75.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-08-03 22:45:00 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-03 22:45:00 -0400
+Processing by ParkController#root as HTML
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/punk/1164" for 127.0.0.1 at 2017-08-03 22:45:05 -0400
+Processing by PunkController#show as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/show.html.erb within layouts/application
+  Rendered punk/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:45:08 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 70ms (Views: 67.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:47:26 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 3780ms (Views: 3776.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:47:59 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 2360ms (Views: 2358.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:48:38 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 2962ms (Views: 2944.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:48:53 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:50:52 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 2589ms (Views: 2585.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:51:12 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 2603ms (Views: 2600.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:52:16 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.3ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 2628ms (Views: 2624.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:52:51 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 2534ms (Views: 2530.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:53:16 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 2513ms (Views: 2511.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:53:42 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/punk/1164" for 127.0.0.1 at 2017-08-03 22:54:19 -0400
+Processing by PunkController#show as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.6ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/show.html.erb within layouts/application
+  Rendered punk/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 53.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:54:21 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/edit.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/punk/1164/edit" for 127.0.0.1 at 2017-08-03 22:55:12 -0400
+Processing by PunkController#edit as HTML
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (0.2ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering punk/edit.html.erb within layouts/application
+  Rendered punk/_punk_edit_navbar.html.erb (0.6ms)
+  Rendered punk/edit.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
