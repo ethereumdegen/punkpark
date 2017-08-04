@@ -38,6 +38,8 @@ gem 'carrierwave'
 gem 'ruby-ethereum'
 gem 'ethereum.rb'
 
+gem 'omniauth'
+gem 'omniauth-github'
 
  #JSON RPC client
 gem 'jimson'
