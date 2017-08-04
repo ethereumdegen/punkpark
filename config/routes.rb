@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'providers/new'
 
-  get 'providers/create'
-
-  get 'providers/failure'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -34,8 +30,8 @@ Rails.application.routes.draw do
 
 
       #get   '/login', :to => 'sessions#new', :as => :login
-      match '/auth/:provider/callback', :to => 'providers#create'
-      match '/auth/failure', :to => 'providers#failure'
+      get '/auth/:provider/callback', :to => 'providers#create'
+      get '/auth/failure', :to => 'providers#failure'
 
  # The priority is based upon order of creation: first created -> highest priority.
  # See how all your routes lay out with "rake routes".
