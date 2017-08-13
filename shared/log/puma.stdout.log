@@ -3829,6 +3829,7 @@ Processing by PunkController#edit as HTML
 Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.2ms)
 
 
+<<<<<<< HEAD
 === puma startup: 2017-08-03 23:12:50 -0400 ====== puma startup: 2017-08-03 23:12:50 -0400 ===
 
 === puma startup: 2017-08-03 23:12:50 -0400 ===
@@ -4281,3 +4282,191 @@ Processing by GoodsController#new as HTML
 Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.0ms)
 
 
+=======
+=== puma startup: 2017-08-04 06:20:29 -0700 ===
+[29863] * Starting control server on unix:///tmp/puma-status-1501852829820-29863
+[29863] - Worker 1 (pid: 29884) booted, phase: 0
+[29863] - Worker 0 (pid: 29880) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2017-08-04 06:20:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (11.0ms)
+Started GET "/auth.github" for 127.0.0.1 at 2017-08-04 06:21:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/auth.github"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `call'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+logging (2.2.2) lib/logging/diagnostic_context.rb:474:in `call'
+logging (2.2.2) lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered collection of /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [13 times] (134.5ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (295.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (276.4ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1310.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (9.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (524.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (28.0ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1133.5ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170804-29884-1tsbku6" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170804-29884-czdqv6" -
+[29863] - Gracefully shutting down workers...
+Completed 500 Internal Server Error in 81641ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error while running `/home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170804-29884-czdqv6" -`:
+
+):
+    2: <html>
+    3: <head>
+    4:   <title>Punkpark</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__814854901_83044330'
+app/controllers/park_controller.rb:16:in `root'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (66.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (233.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (145.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (256.8ms)
+[29863] === puma shutdown: 2017-08-04 06:22:13 -0700 ===
+[29863] - Goodbye!
+Exiting
+=== puma startup: 2017-08-04 06:22:41 -0700 ===
+[29982] * Starting control server on unix:///tmp/puma-status-1501852961911-29982
+[29982] - Worker 0 (pid: 30021) booted, phase: 0
+[29982] - Worker 1 (pid: 30025) booted, phase: 0
+[29982] - Gracefully shutting down workers...
+[29982] === puma shutdown: 2017-08-04 06:23:23 -0700 ===
+[29982] - Goodbye!
+Exiting
+=== puma startup: 2017-08-04 06:23:47 -0700 ===
+[30074] * Starting control server on unix:///tmp/puma-status-1501853027834-30074
+[30074] - Worker 1 (pid: 30097) booted, phase: 0
+[30074] - Worker 0 (pid: 30093) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2017-08-04 06:23:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (10.5ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170804-30093-mrn8kz" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170804-30093-17h5jjc" -
+  Rendered layouts/_navbar.html.erb (3.0ms)
+Completed 200 OK in 10478ms (Views: 10406.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2017-08-04 06:24:29 -0700
+I, [2017-08-04T06:24:29.908792 #30097]  INFO -- omniauth: (github) Request phase initiated.
+Started GET "/" for 127.0.0.1 at 2017-08-04 06:33:00 -0700
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_navbar.html.erb (5.3ms)
+Completed 200 OK in 2320ms (Views: 2308.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 127.0.0.1 at 2017-08-04 06:33:10 -0700
+I, [2017-08-04T06:33:11.146379 #30097]  INFO -- omniauth: (github) Request phase initiated.
+Started GET "/auth/github" for 127.0.0.1 at 2017-08-04 06:34:48 -0700
+I, [2017-08-04T06:34:48.703604 #30097]  INFO -- omniauth: (github) Request phase initiated.
+Started GET "/auth/github" for 127.0.0.1 at 2017-08-04 06:35:06 -0700
+I, [2017-08-04T06:35:07.223082 #30097]  INFO -- omniauth: (github) Request phase initiated.
+Started GET "/auth/github" for 127.0.0.1 at 2017-08-04 06:35:08 -0700
+I, [2017-08-04T06:35:08.438518 #30097]  INFO -- omniauth: (github) Request phase initiated.
+[30074] - Gracefully shutting down workers...
+[30074] === puma shutdown: 2017-08-04 06:37:14 -0700 ===
+[30074] - Goodbye!
+Exiting
+=== puma startup: 2017-08-04 06:37:47 -0700 ===
+[30742] * Starting control server on unix:///tmp/puma-status-1501853867929-30742
+[30742] - Worker 0 (pid: 30760) booted, phase: 0
+[30742] - Worker 1 (pid: 30763) booted, phase: 0
+Started GET "/auth/github" for 127.0.0.1 at 2017-08-04 06:37:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2017-08-04T06:37:58.145263 #30760]  INFO -- omniauth: (github) Request phase initiated.
+Started GET "/auth/github" for 127.0.0.1 at 2017-08-04 06:37:58 -0700
+I, [2017-08-04T06:37:58.582986 #30760]  INFO -- omniauth: (github) Request phase initiated.
+Started GET "/auth/github/callback?code=f1a7673c37d92211a503&state=548bca9d1509ce1065571d631541d18715039eef6f05d7fa" for 127.0.0.1 at 2017-08-04 06:38:21 -0700
+I, [2017-08-04T06:38:22.058667 #30760]  INFO -- omniauth: (github) Callback phase initiated.
+Processing by ProvidersController#create as HTML
+  Parameters: {"code"=>"f1a7673c37d92211a503", "state"=>"548bca9d1509ce1065571d631541d18715039eef6f05d7fa", "provider"=>"github"}
+" callback for "
+"github"
+DEPRECATION WARNING: `render :text` is deprecated because it does not actually render a `text/plain` response. Switch to `render plain: 'plain text'` to render as `text/plain`, `render html: '<strong>HTML</strong>'` to render as `text/html`, or `render body: 'raw'` to match the deprecated behavior and render with the default Content-Type, which is `text/plain`. (called from create at /home/andy/dev/punkpark/app/controllers/providers_controller.rb:17)
+  Rendering text template
+  Rendered text template (0.2ms)
+Completed 200 OK in 94ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+[30742] - Gracefully shutting down workers...
+[30742] === puma shutdown: 2017-08-04 07:31:25 -0700 ===
+[30742] - Goodbye!
+Exiting
+>>>>>>> 4191526b5e3c43d3961468c11a705ebb626c27bb

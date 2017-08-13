@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get 'punk/index'
@@ -27,6 +29,9 @@ Rails.application.routes.draw do
       get 'punk/:punk_id/edit' => 'punk#edit', :as =>:edit_punk
 
       get 'goods/new' => 'goods#new', :as => :new_goods
+      #get   '/login', :to => 'sessions#new', :as => :login
+      get '/auth/:provider/callback', :to => 'providers#create'
+      get '/auth/failure', :to => 'providers#failure'
 
  # The priority is based upon order of creation: first created -> highest priority.
  # See how all your routes lay out with "rake routes".

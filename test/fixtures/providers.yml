@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_id: 1
+  name: MyString
+  token: MyString
+  authenticated_at: 2017-08-04 06:52:30
+
+two:
+  account_id: 1
+  name: MyString
+  token: MyString
+  authenticated_at: 2017-08-04 06:52:30
