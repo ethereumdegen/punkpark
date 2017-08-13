@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Etherpunks</a>
+      <a class="navbar-brand" href="/">Ethergoods</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,11 +79,23 @@
 
           </ul>
         </li>
-        <% end %>
+
+          <li><a href="/logout">Logout</a></li>
+
+         <% else %>
+
+         <li class="eth-sign-button">
+           Sign In With Metamask
+         </li>
 
 
-        <% if @session_has_public_address %>
-         <li><a href="/logout">Logout</a></li>
+         <li class="get-metamask">
+           <a href="https://metamask.io" target="_blank">
+            Login Using Metamask
+            </a>
+         </li>
+
+
          <% end %>
 
 

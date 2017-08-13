@@ -203,7 +203,7 @@ include Ethereum::Secp256k1
 
   def logout_punk
 
-    p 'logout'
+    p 'logout_punk'
     session[:guest_id] = nil
     session[:current_punk_id] = nil
 
@@ -212,7 +212,7 @@ include Ethereum::Secp256k1
 
   def logout_address
 
-    p 'logout'
+    p 'logout_address'
     session[:current_public_address] = nil
     session[:guest_id] = nil
     session[:current_punk_id] = nil

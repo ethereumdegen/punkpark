@@ -3829,3 +3829,423 @@ Processing by PunkController#edit as HTML
 Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.2ms)
 
 
+=== puma startup: 2017-08-03 23:12:50 -0400 ====== puma startup: 2017-08-03 23:12:50 -0400 ===
+
+=== puma startup: 2017-08-03 23:12:50 -0400 ===
+=== puma startup: 2017-08-03 23:12:50 -0400 ===
+=== puma startup: 2017-08-03 23:12:50 -0400 ===
+[5752] ! Terminating timed out worker: 5770
+[5752] - Worker 1 (pid: 13279) booted, phase: 0
+=== puma startup: 2017-08-13 18:12:56 -0400 ===
+[20255] * Starting control server on unix:///tmp/puma-status-1502662376732-20255
+[20255] - Worker 0 (pid: 20263) booted, phase: 0
+[20255] - Worker 1 (pid: 20267) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:13:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1916ms (Views: 1908.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/punk/auth_into_eth_address" for 127.0.0.1 at 2017-08-13 18:13:17 -0400
+Processing by PunkController#auth_into_eth_address as */*
+  Parameters: {"signature"=>"0xcc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d4731b", "challenge"=>"4b660e4a40444765b71714f90ad6fed0c15d02ea93d62e6dd56a9d803c51a574", "signature_v"=>"1b", "signature_r"=>"cc5a0f9edf2008248bf548f35842daa759c61d3091df20fd9d6003cb9e86e64d", "signature_s"=>"57f9dd587787cfaf0262aabd4d4cc418d9969eeec648bfec0ba396cb7f24d473"}
+"authing in with pub addr "
+"7132c9f36abe62eab74cdfdd08c154c9ae45691b"
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:13:17 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-13 18:13:17 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (1.0ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.8ms)
+  Rendered punk/_punk_select_icon.html.erb (0.2ms)
+  Rendered punk/select_punk.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 207ms (Views: 192.8ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-13 18:16:36 -0400
+Processing by PunkController#logout_address as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:16:36 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-13 18:16:36 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.7ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.7ms)
+  Rendered punk/_punk_select_icon.html.erb (0.3ms)
+  Rendered punk/select_punk.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 49.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-13 18:16:38 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (1.0ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.8ms)
+  Rendered punk/_punk_select_icon.html.erb (0.3ms)
+  Rendered punk/select_punk.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-13 18:16:41 -0400
+Processing by PunkController#logout_address as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:16:41 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-13 18:16:41 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.6ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.6ms)
+  Rendered punk/_punk_select_icon.html.erb (0.2ms)
+  Rendered punk/select_punk.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-13 18:16:42 -0400
+Processing by PunkController#logout_address as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:16:42 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-13 18:16:42 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.5ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.7ms)
+  Rendered punk/_punk_select_icon.html.erb (0.9ms)
+  Rendered punk/select_punk.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-13 18:18:12 -0400
+Processing by PunkController#logout_address as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:18:12 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-13 18:18:12 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.9ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (1.6ms)
+  Rendered punk/_punk_select_icon.html.erb (0.9ms)
+  Rendered punk/select_punk.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 66.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-13 18:18:25 -0400
+Processing by PunkController#logout_address as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:18:25 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-13 18:18:25 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (0.7ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (0.7ms)
+  Rendered punk/_punk_select_icon.html.erb (0.3ms)
+  Rendered punk/select_punk.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-13 18:18:25 -0400
+Processing by PunkController#logout_address as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:18:25 -0400
+Processing by ParkController#root as HTML
+Redirected to http://localhost:3000/punk/select
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/punk/select" for 127.0.0.1 at 2017-08-13 18:18:25 -0400
+Processing by PunkController#select_punk as HTML
+  Rendering punk/select_punk.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  [1m[36mPunk Load (1.3ms)[0m  [1m[34mSELECT "punks".* FROM "punks" WHERE "punks"."owner_eth_address" = $1[0m  [["owner_eth_address", "0x7132c9f36abe62eab74cdfdd08c154c9ae45691b"]]
+  Rendered punk/_punk_select_icon.html.erb (1.0ms)
+  Rendered punk/_punk_select_icon.html.erb (0.6ms)
+  Rendered punk/select_punk.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/punk/login" for 127.0.0.1 at 2017-08-13 18:18:31 -0400
+Processing by PunkController#login_punk as */*
+  Parameters: {"punk_id"=>"1164"}
+  [1m[36mPunk Load (1.5ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 0.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:18:31 -0400
+Processing by ParkController#root as HTML
+  [1m[36mPunk Load (0.4ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+  Rendering park/home.html.erb within layouts/application
+  Rendered park/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-13 18:18:32 -0400
+Processing by PunkController#logout_address as HTML
+  [1m[36mPunk Load (1.0ms)[0m  [1m[34mSELECT  "punks".* FROM "punks" WHERE "punks"."id" = $1 LIMIT $2[0m  [["id", 1164], ["LIMIT", 1]]
+"logout_address"
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:18:32 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:18:59 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:20:49 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170813-20267-gp5xsf" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170813-20267-1kwb6hh" -
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 1277ms (Views: 1276.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:20:59 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:23:02 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:25:38 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:26:10 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:26:34 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:26:44 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:28:49 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 3285ms (Views: 3284.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:29:49 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 2504ms (Views: 2503.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:30:24 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 85ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:30:49 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 3284ms (Views: 3282.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:31:12 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 2739ms (Views: 2737.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:31:45 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 3076ms (Views: 3074.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:36:40 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:37:03 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:40:33 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:41:50 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:42:09 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:42:36 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 2912ms (Views: 2911.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:43:04 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2807ms (Views: 2806.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:43:43 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2754ms (Views: 2753.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 18:44:15 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+

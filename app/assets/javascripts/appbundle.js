@@ -15,8 +15,15 @@ window.addEventListener('load', function() {
     window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 
+
+   $("eth-sign-button").hide();
+    $(".get-metamask").show();
+
   } else {
 
+
+     $("eth-sign-button").show();
+      $(".get-metamask").hide();
 
     window.web3 = new Web3(web3.currentProvider);
 
