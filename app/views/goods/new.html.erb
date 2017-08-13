@@ -1,0 +1,42 @@
+<div class="container">
+
+  <h4>List your creation on Ethergoods</h4>
+  <p>Add some information along with your file and it will be saved in the Etherum Blockchain forever.</p>
+
+
+  <form id="new_goods_form">
+    <div class="form-group">
+      <label for="formGroupExampleInput">Name</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Description</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Upload the File</label>
+      <input name="myFile" type="file"  class="form-control">
+    </div>
+
+    <div class="btn btn-primary new-goods-submit-button">Submit</div>
+  </form>
+
+
+
+</div>
+
+
+<script>
+
+
+$(".new-goods-submit-button").on('click',function(){
+  console.log('submitting goood');
+
+  //get hash of the good
+
+
+  //execute smart contract func 
+
+})
+
+</script>
