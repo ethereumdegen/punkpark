@@ -1,9 +1,9 @@
 class ParkController < ApplicationController
 
-  before_action :authentication_required!, except:[:root,:landing]
+  #before_action :authentication_required!, except:[:root,:landing,:about]
 
   def root
- 
+
     if session_has_public_address
 
         if session_signed_in

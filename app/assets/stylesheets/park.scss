@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$color_clouds: #ecf0f1;
+$color_aqua: #1abc9c;
+
 .eth-sign-button
 {
   cursor:pointer;
@@ -47,9 +50,19 @@
 .title-stripe
 {
   background-color: #34495e;
-  color: #ecf0f1;
+  color: $color_clouds;
 
   padding:30px 20px 40px 50px;
+
+  a
+  {
+      color: $color_clouds;
+  }
+
+  a:hover
+  {
+      color: $color_aqua;
+  }
 }
 
 .list-title

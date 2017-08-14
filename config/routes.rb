@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
  get 'park/home'
 
+ get 'park/about' => 'park#about', :as => :about
+
+
 
    get 'punk/select' => 'punk#select_punk', :as => :select_punk
 

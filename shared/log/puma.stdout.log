@@ -4570,3 +4570,243 @@ Processing by GoodsController#new as HTML
 Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
 
 
+[4658] ! Terminating timed out worker: 4665
+[4658] ! Out-of-sync worker list, no 4665 worker
+[4658] - Worker 0 (pid: 9224) booted, phase: 0
+[4658] - Gracefully shutting down workers...
+[4658] === puma shutdown: 2017-08-14 18:38:22 -0400 ===
+[4658] - Goodbye!
+Exiting
+=== puma startup: 2017-08-14 18:38:25 -0400 ===
+[470] * Starting control server on unix:///tmp/puma-status-1502750305965-470
+[470] - Worker 1 (pid: 614) booted, phase: 0
+[470] - Worker 0 (pid: 610) booted, phase: 0
+Started GET "/" for 127.0.0.1 at 2017-08-14 18:41:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.9ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-10tpkwo" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-xh4dmt" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1948ms (Views: 1940.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 18:41:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 407ms (Views: 398.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 18:42:13 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (75.1ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x005557b3a02570>:0x007f094e8b6ce0>):
+     8:     <div class="section">
+     9:           <div class="title-stripe">
+    10:         Ethereum is a shared global database that anyone can interact with using Metamask and other plugins.
+    11:         On Ethergoods, you can buy, sell, and trade unique tokens that represent digital items saved in this database such as artwork, armor, video game weapons, virtual furniture, and more. <a href="<%=url_for about_path%>"><div class="btn btn-xs btn-primary">Learn More</div></a>
+    12:           </div>
+    13:     </div>
+    14: 
+  
+app/views/park/landing.html.erb:11:in `_app_views_park_landing_html_erb__2362384879179182856_69838974594200'
+app/controllers/park_controller.rb:16:in `root'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.4ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.5ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 18:43:11 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/park/about" for 127.0.0.1 at 2017-08-14 18:43:41 -0400
+Processing by ParkController#about as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 18:43:41 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 18:43:45 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/park/about" for 127.0.0.1 at 2017-08-14 18:43:48 -0400
+Processing by ParkController#about as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 18:43:48 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/park/about" for 127.0.0.1 at 2017-08-14 18:44:09 -0400
+Processing by ParkController#about as HTML
+  Rendering park/about.html.erb within layouts/application
+  Rendered park/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 18:45:01 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 18:45:14 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 18:45:19 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 81ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 18:45:20 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 18:45:22 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 19:14:33 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 304ms (Views: 303.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 19:14:47 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 19:14:52 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 19:18:24 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 122.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 19:18:36 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 19:19:18 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 19:19:58 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 4263ms (Views: 4262.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 19:20:39 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 19:22:09 -0400
+Processing by ParkController#root as HTML
+  Rendering park/landing.html.erb within layouts/application
+  Rendered park/landing.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 2707ms (Views: 2706.5ms | ActiveRecord: 0.0ms)
+
+
