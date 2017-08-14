@@ -41,10 +41,10 @@ window.addEventListener('load', function() {
             var text = "Please sign in to Punk Park"
 
 
-            var msg = ethUtil.bufferToHex(new Buffer(text, 'utf8'))
+            var msg = ethUtil.bufferToHex(new Buffer(text, 'utf8'));
           //   var msg = '0x1' // hexEncode(text)
             console.log(msg)
-            var from = web3.eth.accounts[0]
+            var from = web3.eth.accounts[0];
 
             var msg_hash = ethUtil.hashPersonalMessage( new Buffer(text, 'utf8') );
 
@@ -64,15 +64,43 @@ window.addEventListener('load', function() {
           }
 
 
-
-
-
            //send the expected public key, challenge, and signature to the server via Ajax to sign in
 
-
-
-
         });
+
+
+
+
+        $(".new-goods-submit-button").on('click',function(){
+          console.log('submitting goood');
+
+          //get hash of the good
+          var file_hash = "";
+
+            $("#good_file_input").change(
+                function () {
+                    var reader = FileReader();
+
+                    reader.addEventListener(
+                        'load',
+                        function () {
+                            var uniqueHash = ethUtil.sha3(this.result);
+                            console.log( uniqueHash );
+                        }
+                    );
+
+                    reader.readAsArrayBuffer(this.files[0]);
+                }
+            );
+
+
+          //execute smart contract func
+
+          var from = web3.eth.accounts[0];
+          //web3 call
+
+        })
+
 
 
 
