@@ -12,7 +12,8 @@ class ProvidersController < ApplicationController
 
   #  render :text => auth_hash.inspect
 
-     provider: auth_hash['provider'], uid: auth_hash['uid']
+     provider=  auth_hash['provider']
+     uid=  auth_hash['uid']
 
      nickname = auth_hash['info']['nickname']
      name = auth_hash['info']['name']
