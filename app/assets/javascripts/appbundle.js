@@ -82,7 +82,7 @@ window.addEventListener('load', function() {
                       var wordArray = CryptoJS.lib.WordArray.create(evt.target.result);
                       var uniqueHash = CryptoJS.SHA256(wordArray);
 
-
+                          $("#good_file_input").data('uniquehash',uniqueHash.toString());
                           setInputFileUniqueHash( uniqueHash.toString() );
                     }
                   };
@@ -100,9 +100,14 @@ window.addEventListener('load', function() {
           console.log('submitting goood');
 
           //get hash of the good
-          var file_hash = "";
+          var file_unique_hash = $("#good_file_input").data('uniquehash');
 
 
+          var file_name = "canoe";
+          var file_description = "a wooden boat";
+
+          var file_quantity = 5;
+          var file_price = 500;
 
           //execute smart contract func
 
@@ -110,10 +115,66 @@ window.addEventListener('load', function() {
           //web3 call
 
 
-            let parsed_abi = parseEtherGoodsABI();
+          console.log('from addr ')
 
-            console.log('parsed_abi');
-            console.log(parsed_abi);
+          console.log(from)
+
+
+            let contract_abi = parseEtherGoodsABI();
+
+            console.log('contract_abi');
+            console.log(contract_abi);
+
+
+            var EtherGoodsContract = web3.eth.contract(contract_abi);
+            var contractInstance = EtherGoodsContract.at('01f61eb2b7ab998141354dbfcc0c37cc3da2938d3f8fe924d0ed159e635a9bbea');
+
+
+            // suppose you want to call a function named myFunction of myContract
+            var dataBundle = contractInstance.registerNewGood.getData(from,file_unique_hash,file_name,file_description,file_quantity,file_price);
+            console.log(dataBundle)
+
+             web3.eth.estimateGas({
+                    to: "0xc4abd0339eb8d57087278718986382264244252f",
+                    data: "0xc6888fa10000000000000000000000000000000000000000000000000000000000000003"
+                },function(error,result){
+                    console.log(result);
+                });
+
+            //finally paas this data parameter to send Transaction
+            web3.eth.sendTransaction({to:'0xc4abd0339eb8d57087278718986382264244252f', from: from, data: dataBundle},function(error,result){
+              if(error)
+              {
+                console.log(error);
+              }
+                console.log(result);
+            });
+
+            /*
+            var registration = contractInstance.registerNewGood(from, file_unique_hash, file_name, file_description,file_quantity,file_price, function(err, res){
+              if(err)
+              {
+                console.log(err);
+              }else
+              {
+                console.log('reg new asset! ');
+                console.log(res);
+              }
+
+
+            });
+            */
+
+
+            /*// In Javascript
+              myContract.transfer(otherAddress, aNumber, { from: myAccount });
+              // Or
+              myContract.transfer.sendTransaction(otherAddress, aNumber, { from: myAccount });
+              // Or
+              myContract.transfer.call(otherAddress, aNumber, { from: myAccount });
+
+              */
+
         })
 
 
