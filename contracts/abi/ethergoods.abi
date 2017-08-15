@@ -1,0 +1,673 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "supplyIndex",
+        "type": "uint256"
+      },
+      {
+        "name": "minSalePriceInWei",
+        "type": "uint256"
+      },
+      {
+        "name": "toAddress",
+        "type": "address"
+      }
+    ],
+    "name": "offerSupplyForSaleToAddress",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "claimPrice",
+        "type": "uint256"
+      },
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setClaimsPrice",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "name",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "supplyIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "buySupply",
+    "outputs": [],
+    "payable": true,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "transferRegistration",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "claimGood",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "supplyIndex",
+        "type": "uint256"
+      },
+      {
+        "name": "minSalePriceInWei",
+        "type": "uint256"
+      }
+    ],
+    "name": "offerSupplyForSale",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "to",
+        "type": "address"
+      }
+    ],
+    "name": "getSupplyBalance",
+    "outputs": [
+      {
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "EthergoodsMarket",
+    "outputs": [],
+    "payable": true,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "withdraw",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "supplyIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "supplyNoLongerForSale",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "supplyIndex",
+        "type": "uint256"
+      },
+      {
+        "name": "minPrice",
+        "type": "uint256"
+      }
+    ],
+    "name": "acceptBidForSupply",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "enabled",
+        "type": "bool"
+      },
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "setClaimsEnabled",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "standard",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "symbol",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "goods",
+    "outputs": [
+      {
+        "name": "initialized",
+        "type": "bool"
+      },
+      {
+        "name": "creator",
+        "type": "address"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "name": "totalSupply",
+        "type": "uint256"
+      },
+      {
+        "name": "nextSupplyIndexToSell",
+        "type": "uint256"
+      },
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "claimPrice",
+        "type": "uint256"
+      },
+      {
+        "name": "claimsEnabled",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "supplyIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdrawBidForSupply",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "name": "totalSupply",
+        "type": "uint256"
+      },
+      {
+        "name": "claimPrice",
+        "type": "uint256"
+      }
+    ],
+    "name": "registerNewGood",
+    "outputs": [],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "name": "supplyIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "enterBidForSupply",
+    "outputs": [],
+    "payable": true,
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "pendingWithdrawals",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "goodHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RegisterGood",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "goodHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RegistrationTransfer",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "enabele",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "name": "goodHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "ModifyClaimsEnable",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "price",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "goodHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "ModifyClaimsPrice",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "goodHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "supplyIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "ClaimGood",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "from",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "TransferSupply",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "supplyIndex",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "minValue",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "toAddress",
+        "type": "address"
+      }
+    ],
+    "name": "SupplyOffered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "supplyIndex",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "fromAddress",
+        "type": "address"
+      }
+    ],
+    "name": "SupplyBidEntered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "supplyIndex",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "fromAddress",
+        "type": "address"
+      }
+    ],
+    "name": "SupplyBidWithdrawn",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "supplyIndex",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "fromAddress",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "toAddress",
+        "type": "address"
+      }
+    ],
+    "name": "SupplyBought",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "supplyIndex",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "fromAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "toAddress",
+        "type": "address"
+      }
+    ],
+    "name": "SupplySold",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "uniqueHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "name": "supplyIndex",
+        "type": "uint256"
+      }
+    ],
+    "name": "SupplyNoLongerForSale",
+    "type": "event"
+  }
+]
