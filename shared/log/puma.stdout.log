@@ -5512,3 +5512,109 @@ Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile
 Completed 200 OK in 1356ms (Views: 1355.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:11:18 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-17us3kh" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-ijz642" -
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 1304ms (Views: 1303.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:12:35 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1gkf2ol" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1dag6yu" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1352ms (Views: 1350.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:12:58 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1l7otwy" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1921idu" -
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 1316ms (Views: 1315.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:13:40 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-d3manc" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-uvbet4" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1481ms (Views: 1478.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:19:12 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.6ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-ms1t0x" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-q3uth3" -
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 1941ms (Views: 1939.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:56:13 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1dclwjf" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1tzqhd4" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1757ms (Views: 1755.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:56:50 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:57:47 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-15j1i75" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-14fh5ue" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1245ms (Views: 1243.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:58:05 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-d9menu" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1b8wu6j" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1318ms (Views: 1317.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:58:53 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.5ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-q3e0bl" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1clumyw" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1333ms (Views: 1332.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:59:35 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
