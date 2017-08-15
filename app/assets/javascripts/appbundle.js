@@ -8,6 +8,10 @@ window.addEventListener('load', function() {
   console.log('loading');
 
 
+  readGoodRegisteredWithHash('43df29e4453fd8ba8e1fc4e69e0755c1b0ec7db179c067c6ac6aade20ac82042');
+  readGoodRegisteredWithHash('33df29e4453fd8ba8e1fc4e69e0755c1b0ec7db179c067c6ac6aade20ac82042');
+
+
   if (typeof web3 == 'undefined') {
 
     console.log('No web3? You should consider trying MetaMask!')
@@ -90,8 +94,6 @@ window.addEventListener('load', function() {
 
                   reader.readAsArrayBuffer(this.files[0]);
 
-
-
             }
         );
 
@@ -119,61 +121,9 @@ window.addEventListener('load', function() {
 
           console.log(from)
 
-
-            let contract_abi = parseEtherGoodsABI();
-
-            console.log('contract_abi');
-            console.log(contract_abi);
+            registerNewGoodOnBlockchain();
 
 
-            var EtherGoodsContract = web3.eth.contract(contract_abi);
-            var contractInstance = EtherGoodsContract.at('0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5');
-
-
-            // suppose you want to call a function named myFunction of myContract
-            var dataBundle = contractInstance.registerNewGood.getData(from,file_unique_hash,file_name,file_description,file_quantity,file_price);
-            console.log(dataBundle)
-
-             web3.eth.estimateGas({
-                    to: "0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5",
-                    data: "0xc6888fa10000000000000000000000000000000000000000000000000000000000000003"
-                },function(error,result){
-                    console.log(result);
-                });
-
-            //finally paas this data parameter to send Transaction
-            web3.eth.sendTransaction({to:'0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5', from: from, data: dataBundle},function(error,result){
-              if(error)
-              {
-                console.log(error);
-              }
-                console.log(result);
-            });
-
-            /*
-            var registration = contractInstance.registerNewGood(from, file_unique_hash, file_name, file_description,file_quantity,file_price, function(err, res){
-              if(err)
-              {
-                console.log(err);
-              }else
-              {
-                console.log('reg new asset! ');
-                console.log(res);
-              }
-
-
-            });
-            */
-
-
-            /*// In Javascript
-              myContract.transfer(otherAddress, aNumber, { from: myAccount });
-              // Or
-              myContract.transfer.sendTransaction(otherAddress, aNumber, { from: myAccount });
-              // Or
-              myContract.transfer.call(otherAddress, aNumber, { from: myAccount });
-
-              */
 
         })
 
@@ -183,6 +133,56 @@ window.addEventListener('load', function() {
 }
 
 });
+
+
+
+function readGoodRegisteredWithHash(uniqueHash)
+{
+//43df29e4453fd8ba8e1fc4e69e0755c1b0ec7db179c067c6ac6aade20ac82042
+
+
+    let contract_abi = parseEtherGoodsABI();
+
+    var EtherGoodsContract = web3.eth.contract(contract_abi);
+    var contractInstance = EtherGoodsContract.at('0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5');
+
+    var punks = contractInstance.goods(uniqueHash, function(err, res){
+        console.log( 'volcanooo' )
+        console.log( res )
+       });
+
+}
+
+
+function registerNewGoodOnBlockchain(from,file_unique_hash,file_name,file_description,file_quantity,file_price)
+{
+
+              let contract_abi = parseEtherGoodsABI();
+
+              var EtherGoodsContract = web3.eth.contract(contract_abi);
+              var contractInstance = EtherGoodsContract.at('0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5');
+
+
+              // suppose you want to call a function named myFunction of myContract
+              var dataBundle = contractInstance.registerNewGood.getData(from,file_unique_hash,file_name,file_description,file_quantity,file_price);
+              console.log(dataBundle)
+
+            /*   web3.eth.estimateGas({
+                      to: "0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5",
+                      data: "0xc6888fa10000000000000000000000000000000000000000000000000000000000000003"
+                  },function(error,result){
+                      console.log(result);
+                  });*/
+
+              //finally paas this data parameter to send Transaction
+              web3.eth.sendTransaction({to:'0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5', from: from, data: dataBundle},function(error,result){
+                if(error)
+                {
+                  console.log(error);
+                }
+                  console.log(result);
+              });
+}
 
 
 function setInputFileUniqueHash(uniqueHash)

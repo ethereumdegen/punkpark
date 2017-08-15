@@ -5456,3 +5456,59 @@ Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile
 Completed 200 OK in 1336ms (Views: 1335.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:47:30 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.8ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-ca6vbi" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-z9wnf6" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1285ms (Views: 1284.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:48:04 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:02:39 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.2ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-61ce24" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1x28abg" -
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 1273ms (Views: 1272.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:03:10 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:03:53 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1t9a73p" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1x9bv18" -
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 1307ms (Views: 1306.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 22:04:31 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-10q5y3m" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-20v2u1" -
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 1356ms (Views: 1355.6ms | ActiveRecord: 0.0ms)
+
+
