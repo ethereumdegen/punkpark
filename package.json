@@ -13,6 +13,7 @@
     "browserify-shim": "~3.2.0",
     "crypto-js": "^3.1.9-1",
     "ethereumjs-util": "^5.1.2",
+    "fs": "0.0.1-security",
     "jquery": "^3.2.1",
     "require": "^2.4.20"
   },

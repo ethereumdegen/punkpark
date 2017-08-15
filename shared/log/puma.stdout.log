@@ -4954,3 +4954,341 @@ Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile
 Completed 200 OK in 1327ms (Views: 1326.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:02:45 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-up8qkj" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1jtaz27" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1264ms (Views: 1263.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:07:16 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (1.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-69s9wd" -
+Completed 500 Internal Server Error in 379ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error while running `/home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-69s9wd" -`:
+
+events.js:163
+      throw er; // Unhandled 'error' event
+      ^
+
+SyntaxError: Unexpected token (117:96) while parsing /home/andy/dev/punkpark/app/assets/javascripts/_stream_0.js while parsing file: /home/andy/dev/punkpark/app/assets/javascripts/_stream_0.js
+    at DestroyableTransform.end [as _flush] (/home/andy/dev/punkpark/node_modules/insert-module-globals/index.js:96:21)
+    at DestroyableTransform.<anonymous> (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_transform.js:138:49)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at DestroyableTransform.emit (events.js:188:7)
+    at prefinish (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:596:14)
+    at finishMaybe (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:604:5)
+    at endWritable (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:615:3)
+    at DestroyableTransform.Writable.end (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:571:41)
+    at DestroyableTransform.onend (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_readable.js:570:10)
+):
+    3: <head>
+    4:   <title>Ethergoods</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+    9:   <%= favicon_link_tag 'favicon.png' %>
+  
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4490827601458617830_69839015876200'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.8ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.3ms)
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:07:29 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.5ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1wj974e" -
+Completed 500 Internal Server Error in 324ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error while running `/home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1wj974e" -`:
+
+events.js:163
+      throw er; // Unhandled 'error' event
+      ^
+
+SyntaxError: Unexpected token (117:96) while parsing /home/andy/dev/punkpark/app/assets/javascripts/_stream_0.js while parsing file: /home/andy/dev/punkpark/app/assets/javascripts/_stream_0.js
+    at DestroyableTransform.end [as _flush] (/home/andy/dev/punkpark/node_modules/insert-module-globals/index.js:96:21)
+    at DestroyableTransform.<anonymous> (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_transform.js:138:49)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at DestroyableTransform.emit (events.js:188:7)
+    at prefinish (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:596:14)
+    at finishMaybe (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:604:5)
+    at endWritable (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:615:3)
+    at DestroyableTransform.Writable.end (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:571:41)
+    at DestroyableTransform.onend (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_readable.js:570:10)
+):
+    3: <head>
+    4:   <title>Ethergoods</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+    9:   <%= favicon_link_tag 'favicon.png' %>
+  
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4490827601458617830_69838888162820'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.8ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.1ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.9ms)
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:07:53 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1chudat" -
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error while running `/home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1chudat" -`:
+
+events.js:163
+      throw er; // Unhandled 'error' event
+      ^
+
+SyntaxError: Unexpected token (117:95) while parsing /home/andy/dev/punkpark/app/assets/javascripts/_stream_0.js while parsing file: /home/andy/dev/punkpark/app/assets/javascripts/_stream_0.js
+    at DestroyableTransform.end [as _flush] (/home/andy/dev/punkpark/node_modules/insert-module-globals/index.js:96:21)
+    at DestroyableTransform.<anonymous> (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_transform.js:138:49)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at DestroyableTransform.emit (events.js:188:7)
+    at prefinish (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:596:14)
+    at finishMaybe (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:604:5)
+    at endWritable (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:615:3)
+    at DestroyableTransform.Writable.end (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:571:41)
+    at DestroyableTransform.onend (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_readable.js:570:10)
+):
+    3: <head>
+    4:   <title>Ethergoods</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+    9:   <%= favicon_link_tag 'favicon.png' %>
+  
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4490827601458617830_69838820235480'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.3ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.4ms)
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:07:59 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-icv664" -
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Error while running `/home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-icv664" -`:
+
+events.js:163
+      throw er; // Unhandled 'error' event
+      ^
+
+SyntaxError: Unexpected token (117:78) while parsing /home/andy/dev/punkpark/app/assets/javascripts/_stream_0.js while parsing file: /home/andy/dev/punkpark/app/assets/javascripts/_stream_0.js
+    at DestroyableTransform.end [as _flush] (/home/andy/dev/punkpark/node_modules/insert-module-globals/index.js:96:21)
+    at DestroyableTransform.<anonymous> (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_transform.js:138:49)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at DestroyableTransform.emit (events.js:188:7)
+    at prefinish (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:596:14)
+    at finishMaybe (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:604:5)
+    at endWritable (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:615:3)
+    at DestroyableTransform.Writable.end (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_writable.js:571:41)
+    at DestroyableTransform.onend (/home/andy/dev/punkpark/node_modules/readable-stream/lib/_stream_readable.js:570:10)
+):
+    3: <head>
+    4:   <title>Ethergoods</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+    9:   <%= favicon_link_tag 'favicon.png' %>
+  
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__4490827601458617830_69838863096480'
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.6ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /home/andy/.rvm/gems/ruby-2.2.7/gems/actionpack-5.0.0/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendering /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/andy/.rvm/gems/ruby-2.2.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.1ms)
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:08:33 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-ul56wm" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1kj5ql" -
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 1223ms (Views: 1222.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:08:43 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.6ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-1dtls5g" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-614-78bhv1" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1214ms (Views: 1212.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:09:33 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.6ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1re8e79" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-mbz01o" -
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 1398ms (Views: 1396.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:09:54 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.2ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-16tboxl" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-rwdd74" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1362ms (Views: 1361.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:11:36 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.3ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1fp8173" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-qsv234" -
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 1625ms (Views: 1624.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:12:57 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.7ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1k8y61y" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1cvnogz" -
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 1562ms (Views: 1560.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:18:03 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-mhp65k" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-16pwluj" -
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 1282ms (Views: 1280.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods/new" for 127.0.0.1 at 2017-08-14 21:19:29 -0400
+Processing by GoodsController#new as HTML
+  Rendering goods/new.html.erb within layouts/application
+  Rendered goods/new.html.erb within layouts/application (0.4ms)
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc --list --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-16e6dg5" -
+Browserify: /home/andy/dev/punkpark/node_modules/.bin/browserifyinc  --cachefile=/home/andy/dev/punkpark/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/andy/dev/punkpark/tmp/cache/browserify-rails/output20170814-610-1frcy05" -
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 1361ms (Views: 1359.9ms | ActiveRecord: 0.0ms)
+
+
