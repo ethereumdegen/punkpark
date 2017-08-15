@@ -127,7 +127,7 @@ window.addEventListener('load', function() {
 
 
             var EtherGoodsContract = web3.eth.contract(contract_abi);
-            var contractInstance = EtherGoodsContract.at('01f61eb2b7ab998141354dbfcc0c37cc3da2938d3f8fe924d0ed159e635a9bbea');
+            var contractInstance = EtherGoodsContract.at('0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5');
 
 
             // suppose you want to call a function named myFunction of myContract
@@ -135,14 +135,14 @@ window.addEventListener('load', function() {
             console.log(dataBundle)
 
              web3.eth.estimateGas({
-                    to: "0xc4abd0339eb8d57087278718986382264244252f",
+                    to: "0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5",
                     data: "0xc6888fa10000000000000000000000000000000000000000000000000000000000000003"
                 },function(error,result){
                     console.log(result);
                 });
 
             //finally paas this data parameter to send Transaction
-            web3.eth.sendTransaction({to:'0xc4abd0339eb8d57087278718986382264244252f', from: from, data: dataBundle},function(error,result){
+            web3.eth.sendTransaction({to:'0xdd6fa24be361432c0359ab7f2bde155a4fc31ce5', from: from, data: dataBundle},function(error,result){
               if(error)
               {
                 console.log(error);
