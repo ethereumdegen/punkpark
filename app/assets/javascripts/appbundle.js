@@ -1,6 +1,7 @@
 
 window.$ = window.jQuery = global.$ = require('jquery');
 var ethUtil =  require('ethereumjs-util');
+var CryptoJS = require('crypto-js')
 
 
 
@@ -70,6 +71,31 @@ window.addEventListener('load', function() {
 
 
 
+        $("#good_file_input").change(
+            function () {
+                var reader = new FileReader();
+
+
+
+                reader.onloadend = function(evt) {
+                    if (evt.target.readyState == FileReader.DONE) { // DONE == 2
+
+                      var wordArray = CryptoJS.lib.WordArray.create(evt.target.result);
+                      var uniqueHash = CryptoJS.SHA256(wordArray);
+
+
+                          setInputFileUniqueHash( uniqueHash.toString() );
+                    }
+                  };
+
+
+                  reader.readAsArrayBuffer(this.files[0]);
+
+
+
+            }
+        );
+
 
         $(".new-goods-submit-button").on('click',function(){
           console.log('submitting goood');
@@ -77,27 +103,15 @@ window.addEventListener('load', function() {
           //get hash of the good
           var file_hash = "";
 
-            $("#good_file_input").change(
-                function () {
-                    var reader = FileReader();
-
-                    reader.addEventListener(
-                        'load',
-                        function () {
-                            var uniqueHash = ethUtil.sha3(this.result);
-                            console.log( uniqueHash );
-                        }
-                    );
-
-                    reader.readAsArrayBuffer(this.files[0]);
-                }
-            );
 
 
           //execute smart contract func
 
           var from = web3.eth.accounts[0];
           //web3 call
+
+
+            executeEtherGoodsContract();
 
         })
 
@@ -107,6 +121,34 @@ window.addEventListener('load', function() {
 }
 
 });
+
+
+function setInputFileUniqueHash(uniqueHash)
+{
+  $('.unique-hash-preview').html(uniqueHash);
+  console.log(uniqueHash)
+}
+
+
+function executeEtherGoodsContract()
+{
+  path = require('path');
+   filePath = path.join(__dirname, 'contracts/CryptoPunksMarket.abi');
+
+
+
+  var contract_abi = "";
+  fs.readFile(filePath, 'utf8', function (err,data) {
+    if (err) {
+      return console.log('error reading abi' + err);
+    }
+
+        contract_abi = JSON.parse(data);
+
+         readPunkOwnersFromContract(contract_abi);
+
+  });
+}
 
 
 function checkLoginSignature(_signature_response_hex,_challenge_digest_hash)
